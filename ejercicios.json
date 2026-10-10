@@ -1,0 +1,3620 @@
+{
+  "version": 4,
+  "ajustes": {
+    "segundosPreparacion": 10,
+    "segundosCambioLado": 8,
+    "voz": true,
+    "sonido": true
+  },
+  "vocabulario": {
+    "clase": [
+      "movilidad",
+      "estiramiento",
+      "fuerza",
+      "cardio",
+      "relajacion"
+    ],
+    "posicion": [
+      "de-pie",
+      "sentado",
+      "de-rodillas",
+      "cuatro-patas",
+      "manos-y-pies",
+      "boca-arriba",
+      "boca-abajo"
+    ],
+    "equipo": [
+      "esterilla",
+      "pared",
+      "silla",
+      "toalla",
+      "palo",
+      "rodillo",
+      "banco",
+      "mancuernas",
+      "pesa-rusa",
+      "maquina"
+    ],
+    "zonas": [
+      "cuello",
+      "hombros",
+      "brazos",
+      "pecho",
+      "espalda-alta",
+      "zona-lumbar",
+      "abdomen",
+      "cadera",
+      "gluteos",
+      "muslos",
+      "pantorrillas",
+      "cuerpo-completo"
+    ],
+    "exigencias": [
+      "flexion-columna",
+      "extension-columna",
+      "rotacion-columna",
+      "inclinacion-lateral",
+      "carga-columna",
+      "impacto",
+      "apoyo-rodillas",
+      "flexion-profunda-rodilla",
+      "apoyo-munecas",
+      "brazos-por-encima",
+      "cuello",
+      "equilibrio",
+      "cabeza-abajo",
+      "suelo"
+    ]
+  },
+  "categorias": [
+    "Espalda",
+    "Cuerpo completo",
+    "Mañana",
+    "Rápidas",
+    "Hombros y brazos",
+    "Calentamiento y fuerza",
+    "Relajación"
+  ],
+  "ejercicios": [
+    {
+      "id": "postura-del-nino",
+      "nombre": "Postura del niño",
+      "imagen": "postura-del-nino.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "espalda-alta",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "apoyo-rodillas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "De rodillas, siéntate sobre los talones.",
+        "Inclínate hacia delante y estira los brazos por delante, con la frente hacia el suelo.",
+        "Respira despacio y deja que la espalda se relaje."
+      ],
+      "precaucion": "Si inclinarte hacia delante te aumenta el dolor de espalda, sáltalo. Si te molestan las rodillas, pon un cojín entre los glúteos y los talones."
+    },
+    {
+      "id": "rodilla-al-pecho",
+      "nombre": "Rodilla al pecho",
+      "imagen": "rodilla-al-pecho.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "gluteos",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las piernas estiradas.",
+        "Abraza una rodilla y llévala hacia el pecho sin forzar.",
+        "Deja la otra pierna relajada en el suelo y la cabeza apoyada."
+      ],
+      "precaucion": "Si llevar la rodilla al pecho te aumenta el dolor de espalda, sáltalo."
+    },
+    {
+      "id": "inclinacion-pelvica",
+      "nombre": "Inclinación pélvica",
+      "imagen": "inclinacion-pelvica.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Inclina",
+          "segundos": 3
+        },
+        {
+          "texto": "Suelta",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "abdomen"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados.",
+        "Inclina: aprieta un poco el abdomen y pega la zona lumbar al suelo.",
+        "Suelta: vuelve despacio a la posición inicial."
+      ],
+      "precaucion": "Es un movimiento pequeño: no levantes los glúteos."
+    },
+    {
+      "id": "puente",
+      "nombre": "Puente",
+      "imagen": "puente.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Sube",
+          "segundos": 2
+        },
+        {
+          "texto": "Mantén",
+          "segundos": 2
+        },
+        {
+          "texto": "Baja",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "gluteos",
+        "zona-lumbar",
+        "muslos"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados, separados al ancho de la cadera.",
+        "Sube: aprieta los glúteos y eleva la cadera hasta alinear hombros, cadera y rodillas.",
+        "Mantén arriba un momento y baja despacio."
+      ],
+      "precaucion": "No arquees la zona lumbar al subir."
+    },
+    {
+      "id": "gato-vaca",
+      "nombre": "Gato-vaca",
+      "imagen": "gato-vaca.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Gato",
+          "segundos": 3
+        },
+        {
+          "texto": "Vaca",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "extension-columna",
+        "apoyo-rodillas",
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas: manos bajo los hombros y rodillas bajo la cadera.",
+        "Gato: redondea la espalda hacia arriba y mete la barbilla.",
+        "Vaca: baja el abdomen, hunde un poco la espalda y mira al frente."
+      ],
+      "precaucion": "Muévete despacio y sin llegar al límite."
+    },
+    {
+      "id": "giro-sentado",
+      "nombre": "Giro sentado",
+      "imagen": "giro-sentado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "zona-lumbar",
+        "gluteos"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate en el suelo y cruza una pierna por encima de la otra, con el pie apoyado junto a la rodilla.",
+        "Gira el tronco hacia la pierna doblada, con una mano apoyada detrás de ti.",
+        "Crece hacia arriba al tomar aire y gira un poco más al soltarlo, sin forzar."
+      ],
+      "precaucion": "Gira con la espalda, no con el cuello."
+    },
+    {
+      "id": "flexor-de-cadera-arrodillado",
+      "nombre": "Flexor de cadera",
+      "imagen": "flexor-de-cadera-arrodillado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Arrodíllate con una pierna delante, el pie apoyado y la rodilla en ángulo recto.",
+        "Con el tronco recto, lleva la cadera hacia delante hasta notar el estiramiento en la parte delantera del muslo de atrás.",
+        "Aprieta un poco el glúteo de la pierna de atrás."
+      ],
+      "precaucion": "Pon un cojín bajo la rodilla apoyada."
+    },
+    {
+      "id": "piernas-en-la-pared",
+      "nombre": "Piernas en la pared",
+      "imagen": "piernas-en-la-pared.png",
+      "clase": "relajacion",
+      "tipo": "mantenido",
+      "segundos": 60,
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla",
+        "pared"
+      ],
+      "zonas": [
+        "muslos",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate de lado junto a la pared, túmbate y gira para subir las piernas apoyadas en ella.",
+        "Deja los brazos relajados a los lados.",
+        "Respira despacio y relaja la espalda."
+      ],
+      "precaucion": "Si notas hormigueo en las piernas, bájalas."
+    },
+    {
+      "id": "estiramiento-cuello",
+      "nombre": "Estiramiento de cuello",
+      "imagen": "estiramiento-cuello.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuello"
+      ],
+      "exigencias": [
+        "cuello"
+      ],
+      "indicaciones": [
+        "Con la espalda recta y los hombros relajados, inclina la cabeza llevando la oreja hacia el hombro.",
+        "Si quieres un poco más, apoya la mano en la cabeza sin tirar.",
+        "Mantén bajo el hombro contrario."
+      ],
+      "precaucion": "No tires del cuello. Si te mareas o te duele, para."
+    },
+    {
+      "id": "estiramiento-hombro",
+      "nombre": "Estiramiento de hombro",
+      "imagen": "estiramiento-hombro.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Lleva un brazo estirado por delante del pecho.",
+        "Con la otra mano, acércalo al cuerpo sujetándolo por encima del codo.",
+        "Mantén los hombros bajos y relajados."
+      ]
+    },
+    {
+      "id": "estiramiento-triceps",
+      "nombre": "Estiramiento de tríceps",
+      "imagen": "estiramiento-triceps.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "brazos",
+        "hombros"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Sube un brazo y dobla el codo para llevar la mano hacia la espalda.",
+        "Con la otra mano, empuja el codo suavemente hacia atrás.",
+        "Mantén la espalda recta, sin arquearla."
+      ]
+    },
+    {
+      "id": "estiramiento-pelvico",
+      "nombre": "Zancada baja",
+      "imagen": "estiramiento-pelvico.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Arrodíllate con una pierna delante y el pie bien apoyado.",
+        "Apoya las manos en la rodilla de delante y lleva el peso del cuerpo hacia delante.",
+        "Notarás el estiramiento en la ingle y la parte delantera del muslo de la pierna de atrás."
+      ],
+      "precaucion": "Pon un cojín bajo la rodilla apoyada."
+    },
+    {
+      "id": "cuadriceps-de-pie",
+      "nombre": "Cuádriceps de pie",
+      "imagen": "cuadriceps-de-pie.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "pared"
+      ],
+      "zonas": [
+        "muslos"
+      ],
+      "exigencias": [
+        "equilibrio",
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Apóyate con una mano en una pared o en una silla.",
+        "Dobla una rodilla y sujeta el pie, llevando el talón hacia el glúteo.",
+        "Mantén las rodillas juntas y la cadera recta."
+      ],
+      "precaucion": "Apóyate siempre para no perder el equilibrio."
+    },
+    {
+      "id": "flexion-hacia-delante",
+      "nombre": "Flexión hacia delante",
+      "imagen": "flexion-hacia-delante.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "cabeza-abajo"
+      ],
+      "indicaciones": [
+        "De pie, con los pies al ancho de la cadera y las rodillas un poco dobladas.",
+        "Inclínate desde la cadera y deja caer el tronco y los brazos hacia el suelo.",
+        "Sube despacio, enderezando la espalda poco a poco."
+      ],
+      "precaucion": "Si inclinarte hacia delante te aumenta el dolor de espalda o te baja dolor a la pierna, sáltalo. Sube despacio para no marearte."
+    },
+    {
+      "id": "saltos-de-tijera",
+      "nombre": "Saltos de tijera",
+      "imagen": "saltos-de-tijera.png",
+      "clase": "cardio",
+      "tipo": "continuo",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuerpo-completo"
+      ],
+      "exigencias": [
+        "impacto",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, con los pies juntos y los brazos a los lados.",
+        "Salta abriendo las piernas y subiendo los brazos por encima de la cabeza, y vuelve a cerrar.",
+        "Mantén un ritmo que te permita respirar con comodidad."
+      ],
+      "precaucion": "Para evitar el impacto, hazlo sin saltar: da un paso al lado, alternando los pies, mientras subes los brazos."
+    },
+    {
+      "id": "flexion-inclinada",
+      "nombre": "Flexión inclinada",
+      "imagen": "flexion-inclinada.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Baja",
+          "segundos": 2
+        },
+        {
+          "texto": "Sube",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "banco"
+      ],
+      "zonas": [
+        "pecho",
+        "brazos",
+        "hombros"
+      ],
+      "exigencias": [
+        "apoyo-munecas"
+      ],
+      "indicaciones": [
+        "Apoya las manos en un banco, una mesa firme o la encimera, a la anchura de los hombros.",
+        "Con el cuerpo recto de la cabeza a los talones, dobla los codos para acercar el pecho al apoyo.",
+        "Empuja para volver a la posición inicial."
+      ],
+      "precaucion": "Usa un apoyo firme que no se mueva. Cuanto más alto, más fácil."
+    },
+    {
+      "id": "plancha-alta",
+      "nombre": "Plancha alta",
+      "imagen": "plancha-alta.png",
+      "clase": "fuerza",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "manos-y-pies",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "abdomen",
+        "hombros"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Apoya las manos en el suelo bajo los hombros y estira las piernas hacia atrás.",
+        "Mantén el cuerpo en línea recta, sin hundir ni subir la cadera.",
+        "Aprieta el abdomen y respira con normalidad."
+      ],
+      "precaucion": "Si te cuesta, apoya las rodillas en el suelo."
+    },
+    {
+      "id": "sentadilla-sumo",
+      "nombre": "Sentadilla sumo",
+      "imagen": "sentadilla-sumo.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Baja",
+          "segundos": 2
+        },
+        {
+          "texto": "Sube",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "gluteos",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "De pie, con los pies más separados que los hombros y las puntas hacia fuera.",
+        "Baja la cadera con la espalda recta y las rodillas hacia donde apuntan los pies.",
+        "Sube empujando con los talones. Puedes sujetar una pesa con las dos manos."
+      ],
+      "precaucion": "Baja solo hasta donde no notes molestias en las rodillas."
+    },
+    {
+      "id": "talones-al-gluteo",
+      "nombre": "Talones al glúteo",
+      "imagen": "talones-al-gluteo.png",
+      "clase": "cardio",
+      "tipo": "continuo",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "cuerpo-completo"
+      ],
+      "exigencias": [
+        "impacto",
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Trota en el sitio llevando los talones hacia los glúteos.",
+        "Mantén el tronco recto y mueve los brazos con naturalidad."
+      ],
+      "precaucion": "Para evitar el impacto, hazlo caminando en el sitio."
+    },
+    {
+      "id": "gluteos-a-talones",
+      "nombre": "Glúteos a los talones",
+      "imagen": "gluteos-a-talones.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Atrás",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "apoyo-rodillas",
+        "apoyo-munecas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas, con las manos bajo los hombros y las rodillas bajo la cadera.",
+        "Lleva despacio los glúteos hacia los talones sin mover las manos, hasta notar el estiramiento en la espalda.",
+        "Vuelve a la posición inicial."
+      ],
+      "precaucion": "Pon un cojín bajo las rodillas."
+    },
+    {
+      "id": "brazo-y-pierna-opuestos",
+      "nombre": "Brazo y pierna opuestos",
+      "imagen": "brazo-y-pierna-opuestos.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 5,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "abdomen",
+        "gluteos",
+        "hombros"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "apoyo-munecas",
+        "equilibrio",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas, con la espalda recta.",
+        "Estira a la vez un brazo hacia delante y la pierna contraria hacia atrás, sin girar la cadera.",
+        "Vuelve y repite con el otro lado."
+      ],
+      "precaucion": "Hazlo despacio. Si pierdes el equilibrio, estira solo la pierna."
+    },
+    {
+      "id": "extensiones-de-espalda",
+      "nombre": "Extensiones de espalda",
+      "imagen": "extensiones-de-espalda.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Sube",
+          "segundos": 2
+        },
+        {
+          "texto": "Baja",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-abajo",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca abajo con las manos junto a la cabeza o a los lados del cuerpo.",
+        "Levanta un poco el pecho del suelo, mirando hacia abajo.",
+        "Baja despacio."
+      ],
+      "precaucion": "Sube poco. Si notas dolor en la zona lumbar, para."
+    },
+    {
+      "id": "rodillas-a-los-lados",
+      "nombre": "Rodillas a los lados",
+      "imagen": "rodillas-a-los-lados.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "cadera"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados.",
+        "Deja caer las dos rodillas juntas hacia un lado y luego hacia el otro.",
+        "Mantén los hombros en el suelo."
+      ]
+    },
+    {
+      "id": "zancada-lateral",
+      "nombre": "Zancada lateral",
+      "imagen": "zancada-lateral.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Separa mucho los pies, con las puntas un poco hacia fuera.",
+        "Dobla una rodilla y lleva la cadera hacia ese lado, con la otra pierna estirada.",
+        "Notarás el estiramiento en la cara interna del muslo de la pierna estirada."
+      ],
+      "precaucion": "Mantén la rodilla doblada en la dirección del pie."
+    },
+    {
+      "id": "estiramiento-de-gluteo",
+      "nombre": "Estiramiento de glúteo",
+      "imagen": "estiramiento-de-gluteo.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "gluteos",
+        "cadera"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las rodillas dobladas.",
+        "Cruza un tobillo sobre la rodilla contraria.",
+        "Agarra por detrás el muslo de la pierna apoyada y acércalo al pecho hasta notar el estiramiento en el glúteo de la pierna cruzada."
+      ]
+    },
+    {
+      "id": "perro-boca-abajo",
+      "nombre": "Perro boca abajo",
+      "imagen": "perro-boca-abajo.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "manos-y-pies",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "pantorrillas",
+        "muslos",
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "brazos-por-encima",
+        "cabeza-abajo",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Desde cuatro patas, estira las piernas y sube la cadera hacia el techo, formando una V invertida.",
+        "Empuja el suelo con las manos y alarga la espalda.",
+        "Puedes doblar un poco las rodillas si tiran mucho las piernas."
+      ],
+      "precaucion": "Si te molestan las muñecas o los hombros, quédate menos tiempo."
+    },
+    {
+      "id": "cobra",
+      "nombre": "Cobra",
+      "imagen": "cobra.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "boca-abajo",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "abdomen"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca abajo con las manos bajo los hombros.",
+        "Empuja suavemente y sube el pecho, con los codos algo doblados y la cadera en el suelo.",
+        "Mantén los hombros lejos de las orejas."
+      ],
+      "precaucion": "Sube solo hasta donde no notes molestias en la zona lumbar."
+    },
+    {
+      "id": "estiramiento-lateral-de-pie",
+      "nombre": "Estiramiento lateral de pie",
+      "imagen": "estiramiento-lateral-de-pie.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "espalda-alta",
+        "abdomen"
+      ],
+      "exigencias": [
+        "inclinacion-lateral",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, con los pies a la anchura de la cadera, sube un brazo por encima de la cabeza.",
+        "Inclina el tronco hacia el lado contrario, sin girarlo hacia delante.",
+        "Notarás el estiramiento en el costado del brazo levantado."
+      ]
+    },
+    {
+      "id": "apertura-de-pecho",
+      "nombre": "Apertura de pecho",
+      "imagen": "apertura-de-pecho.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "pecho",
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, estira un brazo hacia atrás a la altura de la cadera, con la palma mirando hacia delante.",
+        "Gira un poco el pecho hacia el lado contrario hasta notar el estiramiento en el pecho y la parte delantera del hombro."
+      ],
+      "precaucion": "El estiramiento debe ser suave, sin tirones en el hombro."
+    },
+    {
+      "id": "apertura-de-brazos",
+      "nombre": "Apertura de brazos",
+      "imagen": "apertura-de-brazos.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "pecho",
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, abre los brazos en cruz a la altura de los hombros, con las palmas hacia delante.",
+        "Lleva los brazos un poco hacia atrás y junta los omóplatos.",
+        "Abre el pecho y respira hondo."
+      ]
+    },
+    {
+      "id": "mariposa",
+      "nombre": "Mariposa",
+      "imagen": "mariposa.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate con las plantas de los pies juntas y las rodillas hacia los lados.",
+        "Sujeta los pies con las manos y mantén la espalda recta.",
+        "Deja que las rodillas bajen solas, sin empujarlas."
+      ]
+    },
+    {
+      "id": "pinza-sentada",
+      "nombre": "Pinza sentada",
+      "imagen": "pinza-sentada.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "muslos",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate con las piernas estiradas al frente.",
+        "Inclínate hacia delante desde la cadera, con la espalda larga, y lleva las manos hacia los pies.",
+        "Llega solo hasta donde notes un estiramiento suave en la parte de atrás de las piernas."
+      ],
+      "precaucion": "Dobla un poco las rodillas si tira demasiado o te molesta la espalda."
+    },
+    {
+      "id": "gemelo-en-pared",
+      "nombre": "Gemelo en la pared",
+      "imagen": "gemelo-en-pared.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "pared"
+      ],
+      "zonas": [
+        "pantorrillas"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie frente a una pared, apoya las manos en ella.",
+        "Lleva una pierna atrás, estirada y con el talón apoyado en el suelo.",
+        "Inclina el cuerpo hacia la pared hasta notar el estiramiento en la pantorrilla."
+      ]
+    },
+    {
+      "id": "estiramiento-de-gluteo-sentado",
+      "nombre": "Glúteo sentado",
+      "imagen": "estiramiento-de-gluteo-sentado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "sentado",
+      "equipo": [
+        "silla"
+      ],
+      "zonas": [
+        "gluteos",
+        "cadera"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Siéntate en una silla con los pies apoyados.",
+        "Pon un tobillo sobre la rodilla contraria.",
+        "Con la espalda recta, inclínate un poco hacia delante hasta notar el estiramiento en el glúteo."
+      ]
+    },
+    {
+      "id": "enhebrar-la-aguja",
+      "nombre": "Enhebrar la aguja",
+      "imagen": "enhebrar-la-aguja.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "hombros"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas.",
+        "Pasa un brazo por debajo del cuerpo hacia el lado contrario y apoya el hombro y la cabeza en el suelo.",
+        "Notarás el estiramiento entre los omóplatos."
+      ],
+      "precaucion": "Pon un cojín bajo las rodillas."
+    },
+    {
+      "id": "zancada-profunda",
+      "nombre": "Zancada profunda",
+      "imagen": "zancada-profunda.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "equilibrio"
+      ],
+      "indicaciones": [
+        "Da un paso largo hacia delante y baja la cadera, con la rodilla de delante sobre el tobillo.",
+        "Apoya las manos en la rodilla de delante y mantén la espalda recta.",
+        "Notarás el estiramiento en la ingle y la parte delantera del muslo de la pierna de atrás."
+      ],
+      "precaucion": "Si te cuesta mantener el equilibrio, apoya la rodilla de atrás en el suelo."
+    },
+    {
+      "id": "medio-split",
+      "nombre": "Medio split",
+      "imagen": "medio-split.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "flexion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Arrodíllate y estira una pierna hacia delante, con el talón apoyado y la punta hacia arriba.",
+        "Lleva la cadera hacia atrás e inclínate sobre la pierna estirada, con la espalda recta.",
+        "Notarás el estiramiento en la parte de atrás del muslo."
+      ],
+      "precaucion": "Pon un cojín bajo la rodilla apoyada. Dobla un poco la pierna de delante si tira demasiado."
+    },
+    {
+      "id": "luna-creciente",
+      "nombre": "Luna creciente",
+      "imagen": "luna-creciente.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "muslos",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "equilibrio",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Da un paso largo hacia delante y dobla la rodilla de delante, con la pierna de atrás estirada.",
+        "Sube los brazos por encima de la cabeza y estira el tronco hacia arriba.",
+        "Mira al frente y respira con calma."
+      ],
+      "precaucion": "Si te cuesta mantener el equilibrio, apoya la rodilla de atrás en el suelo."
+    },
+    {
+      "id": "lagarto",
+      "nombre": "Lagarto",
+      "imagen": "lagarto.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Desde una zancada, apoya las dos manos en el suelo por dentro del pie de delante.",
+        "Deja la pierna de atrás estirada o con la rodilla apoyada.",
+        "Baja la cadera despacio hasta notar el estiramiento en la cadera y la ingle."
+      ],
+      "precaucion": "Pon un cojín bajo la rodilla si la apoyas."
+    },
+    {
+      "id": "sentadilla-profunda",
+      "nombre": "Sentadilla profunda",
+      "imagen": "sentadilla-profunda.png",
+      "clase": "movilidad",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "muslos",
+        "pantorrillas"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Con los pies algo más abiertos que la cadera, baja a una sentadilla profunda.",
+        "Junta las manos delante del pecho y usa los codos para abrir un poco las rodillas.",
+        "Mantén los talones apoyados y la espalda lo más recta posible."
+      ],
+      "precaucion": "Si te molestan las rodillas, baja menos. Si se te levantan los talones, pon un libro bajo ellos o agárrate a algo firme."
+    },
+    {
+      "id": "camello",
+      "nombre": "Camello",
+      "imagen": "camello.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "abdomen",
+        "pecho",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Arrodíllate con las rodillas a la anchura de la cadera y apoya las manos en la zona lumbar.",
+        "Empuja la cadera hacia delante y abre el pecho hacia el techo.",
+        "Si te resulta cómodo, lleva las manos a los talones."
+      ],
+      "precaucion": "Es un arco intenso de espalda: si te duele la zona lumbar o el cuello, sáltalo. Pon un cojín bajo las rodillas."
+    },
+    {
+      "id": "paloma",
+      "nombre": "Paloma",
+      "imagen": "paloma.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "gluteos",
+        "cadera"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Desde cuatro patas, lleva una rodilla hacia delante y apoya la espinilla en el suelo, cruzada delante del cuerpo.",
+        "Estira la otra pierna hacia atrás.",
+        "Con las manos apoyadas, inclínate hacia delante hasta notar el estiramiento en el glúteo."
+      ],
+      "precaucion": "Si te molesta la rodilla de delante, haz en su lugar el «Estiramiento de glúteo» boca arriba."
+    },
+    {
+      "id": "flexion-piernas-cruzadas",
+      "nombre": "Flexión hacia delante con piernas cruzadas",
+      "imagen": "flexion-piernas-cruzadas.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "cadera"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "cabeza-abajo"
+      ],
+      "indicaciones": [
+        "De pie, cruza un pie por delante del otro.",
+        "Con las rodillas un poco dobladas, deja caer el tronco hacia delante.",
+        "Notarás el estiramiento en la parte exterior de la pierna de atrás."
+      ],
+      "precaucion": "Si inclinarte hacia delante te aumenta el dolor de espalda, sáltalo. Sube despacio para no marearte."
+    },
+    {
+      "id": "extension-de-cuello",
+      "nombre": "Extensión de cuello",
+      "imagen": "extension-de-cuello.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 5,
+      "fases": [
+        {
+          "texto": "Arriba",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuello"
+      ],
+      "exigencias": [
+        "cuello"
+      ],
+      "indicaciones": [
+        "Sentado o de pie, con la espalda recta.",
+        "Lleva la mirada hacia el techo despacio, sin forzar.",
+        "Vuelve a mirar al frente."
+      ],
+      "precaucion": "Movimiento pequeño. Si te mareas, notas hormigueo o dolor, para."
+    },
+    {
+      "id": "flexion-de-cuello",
+      "nombre": "Flexión de cuello",
+      "imagen": "flexion-de-cuello.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuello"
+      ],
+      "exigencias": [
+        "cuello"
+      ],
+      "indicaciones": [
+        "Sentado o de pie, con la espalda recta.",
+        "Lleva la barbilla hacia el pecho despacio.",
+        "Puedes apoyar las manos en la nuca, sin empujar."
+      ],
+      "precaucion": "Si te mareas o notas hormigueo, para."
+    },
+    {
+      "id": "rotacion-de-cuello",
+      "nombre": "Rotación de cuello",
+      "imagen": "rotacion-de-cuello.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuello"
+      ],
+      "exigencias": [
+        "cuello"
+      ],
+      "indicaciones": [
+        "Sentado o de pie, con la espalda recta y los hombros relajados.",
+        "Gira la cabeza despacio para mirar por encima de un hombro y luego del otro."
+      ],
+      "precaucion": "Sin forzar el giro. Si te mareas o te duele, para."
+    },
+    {
+      "id": "estiramiento-brazos-arriba",
+      "nombre": "Estiramiento de brazos arriba",
+      "imagen": "estiramiento-brazos-arriba.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "brazos",
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "brazos-por-encima",
+        "inclinacion-lateral"
+      ],
+      "indicaciones": [
+        "Sube los dos brazos por encima de la cabeza y, con una mano, sujeta el otro brazo por el codo.",
+        "Estira hacia arriba e inclina un poco el tronco hacia el lado de la mano que sujeta.",
+        "Notarás el estiramiento en el brazo y el costado."
+      ]
+    },
+    {
+      "id": "autoabrazo",
+      "nombre": "Autoabrazo",
+      "imagen": "autoabrazo.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "espalda-alta",
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Cruza los brazos por delante y agárrate los hombros, como si te dieras un abrazo.",
+        "Redondea un poco la parte alta de la espalda.",
+        "Notarás el estiramiento entre los omóplatos."
+      ]
+    },
+    {
+      "id": "extension-de-tronco-de-pie",
+      "nombre": "Extensión de tronco de pie",
+      "imagen": "extension-de-tronco-de-pie.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Atrás",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "zona-lumbar",
+        "abdomen"
+      ],
+      "exigencias": [
+        "extension-columna"
+      ],
+      "indicaciones": [
+        "De pie, con los pies a la anchura de la cadera, apoya las manos en la parte baja de la espalda.",
+        "Lleva el pecho hacia arriba y arquea un poco la espalda hacia atrás, sin echar la cabeza atrás.",
+        "Vuelve a la posición recta."
+      ],
+      "precaucion": "Arquea poco. Si notas dolor en la zona lumbar, para."
+    },
+    {
+      "id": "inclinacion-lateral",
+      "nombre": "Inclinación lateral",
+      "imagen": "inclinacion-lateral.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "abdomen",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "inclinacion-lateral",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, apoya una mano en la cadera y sube el otro brazo por encima de la cabeza.",
+        "Inclina el tronco hacia el lado de la mano apoyada.",
+        "Mantén la cadera quieta y mira al frente."
+      ]
+    },
+    {
+      "id": "giro-de-tronco-de-pie",
+      "nombre": "Giro de tronco de pie",
+      "imagen": "giro-de-tronco-de-pie.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "abdomen",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "rotacion-columna"
+      ],
+      "indicaciones": [
+        "De pie, con las manos detrás de la cabeza y los codos abiertos.",
+        "Gira el tronco despacio hacia un lado y luego hacia el otro.",
+        "La cadera sigue mirando al frente: el giro sale de la cintura."
+      ]
+    },
+    {
+      "id": "descarga-lumbar-de-pie",
+      "nombre": "Descarga lumbar de pie",
+      "imagen": "descarga-lumbar-de-pie.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "zona-lumbar",
+        "muslos"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "cabeza-abajo"
+      ],
+      "indicaciones": [
+        "De pie, con las rodillas un poco dobladas, deja caer el tronco hacia delante desde la cadera.",
+        "Deja los brazos y la cabeza colgando y relaja la zona lumbar.",
+        "Sube muy despacio, enderezando la espalda poco a poco."
+      ],
+      "precaucion": "Si inclinarte hacia delante te aumenta el dolor de espalda o te baja dolor a la pierna, sáltalo. Sube despacio para no marearte."
+    },
+    {
+      "id": "rotaciones-de-hombros",
+      "nombre": "Rotaciones de hombros",
+      "imagen": "rotaciones-de-hombros.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 30,
+      "avisoMitad": "Cambia de sentido",
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, con los brazos relajados a los lados.",
+        "Haz círculos amplios con los hombros hacia atrás.",
+        "Cuando la voz te avise, cambia el sentido."
+      ]
+    },
+    {
+      "id": "deslizamiento-en-pared",
+      "nombre": "Deslizamiento en la pared",
+      "imagen": "deslizamiento-en-pared.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Sube",
+          "segundos": 3
+        },
+        {
+          "texto": "Baja",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "pared"
+      ],
+      "zonas": [
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie frente a una pared, apoya las palmas o los antebrazos en ella a la altura de los hombros.",
+        "Desliza los brazos hacia arriba todo lo que puedas sin dolor.",
+        "Baja despacio."
+      ]
+    },
+    {
+      "id": "brazos-de-aguila",
+      "nombre": "Brazos de águila",
+      "imagen": "brazos-de-aguila.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Estira los brazos al frente y cruza uno por encima del otro a la altura de los codos.",
+        "Dobla los codos y junta las palmas o el dorso de las manos.",
+        "Sube un poco los codos y notarás el estiramiento entre los omóplatos."
+      ]
+    },
+    {
+      "id": "mariposa-con-flexion",
+      "nombre": "Mariposa con flexión",
+      "imagen": "mariposa-con-flexion.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate con las plantas de los pies juntas y las rodillas hacia los lados.",
+        "Sujeta los pies e inclina el tronco hacia delante, dejando caer la cabeza.",
+        "Relaja la espalda y respira despacio."
+      ],
+      "precaucion": "Si al inclinarte hacia delante te molesta la espalda, mantén el tronco recto."
+    },
+    {
+      "id": "rodillo-espalda-alta",
+      "nombre": "Rodillo en la espalda alta",
+      "imagen": "rodillo-espalda-alta.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 45,
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "rodillo"
+      ],
+      "zonas": [
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con un rodillo de espuma bajo la parte alta de la espalda y las manos detrás de la cabeza.",
+        "Con las rodillas dobladas, levanta un poco la cadera y rueda despacio arriba y abajo entre los omóplatos."
+      ],
+      "precaucion": "Necesitas un rodillo de espuma. No lo pases por la zona lumbar ni por el cuello."
+    },
+    {
+      "id": "estiramiento-lateral-arrodillado",
+      "nombre": "Estiramiento lateral arrodillado",
+      "imagen": "estiramiento-lateral-arrodillado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "abdomen",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "inclinacion-lateral",
+        "brazos-por-encima",
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "De rodillas, apoya una mano en el suelo a un lado del cuerpo.",
+        "Lleva el otro brazo por encima de la cabeza e inclina el tronco hacia el lado de la mano apoyada.",
+        "Notarás el estiramiento en el costado."
+      ],
+      "precaucion": "Pon un cojín bajo las rodillas."
+    },
+    {
+      "id": "rana",
+      "nombre": "Rana",
+      "imagen": "rana.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas y separa las rodillas todo lo que te resulte cómodo, con los pies hacia fuera.",
+        "Apoya los antebrazos en el suelo y lleva la cadera hacia atrás despacio.",
+        "Notarás el estiramiento en la cara interna de los muslos."
+      ],
+      "precaucion": "Pon un cojín bajo las rodillas. Si notas molestias en la ingle o las rodillas, abre menos."
+    },
+    {
+      "id": "cabeza-a-rodilla",
+      "nombre": "Cabeza a la rodilla",
+      "imagen": "cabeza-a-rodilla.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "muslos",
+        "zona-lumbar"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate con una pierna estirada y la planta del otro pie apoyada en la cara interna del muslo.",
+        "Inclínate hacia la pierna estirada desde la cadera y lleva las manos hacia el pie.",
+        "Mantén la espalda larga: no hace falta tocar la rodilla con la cabeza."
+      ],
+      "precaucion": "Dobla un poco la rodilla estirada si tira demasiado."
+    },
+    {
+      "id": "perro-arriba-abajo",
+      "nombre": "De plancha a perro boca abajo",
+      "imagen": "perro-arriba-abajo.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Cadera arriba",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "manos-y-pies",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "hombros",
+        "muslos",
+        "pantorrillas"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "brazos-por-encima",
+        "cabeza-abajo",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Empieza en plancha, con las manos bajo los hombros.",
+        "Empuja la cadera hacia arriba y atrás hasta el perro boca abajo.",
+        "Vuelve despacio a la plancha."
+      ],
+      "precaucion": "Si te molestan las muñecas o los hombros, haz menos repeticiones."
+    },
+    {
+      "id": "zancada-con-giro",
+      "nombre": "Zancada con giro",
+      "imagen": "zancada-con-giro.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Gira",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "muslos",
+        "abdomen"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "equilibrio",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Da un paso largo hacia delante y dobla las dos rodillas.",
+        "Con los brazos estirados por encima de la cabeza, gira el tronco hacia el lado de la pierna de delante.",
+        "Vuelve al centro despacio."
+      ],
+      "precaucion": "Si pierdes el equilibrio, junta las manos delante del pecho o apoya la rodilla de atrás en el suelo."
+    },
+    {
+      "id": "cara-de-vaca",
+      "nombre": "Cara de vaca",
+      "imagen": "cara-de-vaca.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [],
+      "zonas": [
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [
+        "brazos-por-encima",
+        "apoyo-rodillas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate sobre los talones con la espalda recta.",
+        "Sube un brazo, dobla el codo y lleva la mano a la espalda; lleva el otro brazo por detrás desde abajo.",
+        "Acerca las manos todo lo que puedas; si no llegan, usa una toalla."
+      ],
+      "precaucion": "Si te molestan las rodillas, hazlo sentado en una silla."
+    },
+    {
+      "id": "circulos-de-cabeza",
+      "nombre": "Círculos de cabeza y cuello",
+      "imagen": "circulos-de-cabeza.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cuello"
+      ],
+      "exigencias": [
+        "cuello"
+      ],
+      "indicaciones": [
+        "Sentado o de pie, con la espalda recta y los hombros relajados.",
+        "Deja caer la barbilla hacia el pecho y dibuja medios círculos despacio, de un hombro al otro.",
+        "No eches la cabeza hacia atrás."
+      ],
+      "precaucion": "Muy despacio. Si te mareas o notas hormigueo, para."
+    },
+    {
+      "id": "pases-de-hombro-con-palo",
+      "nombre": "Pases de hombro con palo",
+      "imagen": "pases-de-hombro-con-palo.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Atrás",
+          "segundos": 3
+        },
+        {
+          "texto": "Delante",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "palo"
+      ],
+      "zonas": [
+        "hombros",
+        "pecho"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, sujeta un palo o una toalla con las manos muy separadas, delante de la cadera.",
+        "Con los brazos estirados, súbelo por encima de la cabeza y llévalo hacia atrás todo lo que puedas sin dolor.",
+        "Vuelve por el mismo camino."
+      ],
+      "precaucion": "Si te duele el hombro, separa más las manos o haz menos recorrido."
+    },
+    {
+      "id": "manos-entrelazadas-atras",
+      "nombre": "Manos entrelazadas a la espalda",
+      "imagen": "manos-entrelazadas-atras.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "pecho",
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, entrelaza las manos detrás de la espalda.",
+        "Estira los brazos y llévalos un poco hacia atrás y arriba, con los hombros bajos.",
+        "Abre el pecho y mira al frente."
+      ]
+    },
+    {
+      "id": "alcance-arriba",
+      "nombre": "Alcance hacia arriba",
+      "imagen": "alcance-arriba.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "hombros",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, sube los brazos por encima de la cabeza.",
+        "Estírate hacia arriba como si quisieras tocar el techo.",
+        "Respira hondo con los hombros relajados."
+      ]
+    },
+    {
+      "id": "balanceo-frontal-de-pierna",
+      "nombre": "Balanceo frontal de pierna",
+      "imagen": "balanceo-frontal-de-pierna.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 20,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "pared"
+      ],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "equilibrio"
+      ],
+      "indicaciones": [
+        "De pie, apóyate con una mano en una pared o una silla.",
+        "Balancea una pierna hacia delante y hacia atrás, de forma suave y controlada.",
+        "Aumenta poco a poco la amplitud, sin forzar."
+      ]
+    },
+    {
+      "id": "balanceo-lateral-de-pierna",
+      "nombre": "Balanceo lateral de pierna",
+      "imagen": "balanceo-lateral-de-pierna.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 20,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "pared"
+      ],
+      "zonas": [
+        "cadera"
+      ],
+      "exigencias": [
+        "equilibrio"
+      ],
+      "indicaciones": [
+        "De pie, apóyate con las manos en una pared o una silla.",
+        "Balancea una pierna de lado a lado por delante del cuerpo.",
+        "Mantén el tronco quieto y el movimiento controlado."
+      ]
+    },
+    {
+      "id": "caminata-a-plancha",
+      "nombre": "Caminata a plancha",
+      "imagen": "caminata-a-plancha.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 5,
+      "fases": [
+        {
+          "texto": "Baja y camina",
+          "segundos": 6
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 6
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cuerpo-completo",
+        "hombros",
+        "muslos"
+      ],
+      "exigencias": [
+        "flexion-columna",
+        "apoyo-munecas",
+        "cabeza-abajo",
+        "suelo"
+      ],
+      "indicaciones": [
+        "De pie, dobla el tronco y apoya las manos en el suelo; dobla las rodillas lo que necesites.",
+        "Camina con las manos hacia delante hasta quedar en plancha.",
+        "Vuelve caminando con las manos hacia los pies y sube despacio."
+      ],
+      "precaucion": "Si te molestan la espalda o las muñecas, haz menos recorrido."
+    },
+    {
+      "id": "abrazo-y-apertura",
+      "nombre": "Abrazo y apertura de pecho",
+      "imagen": "abrazo-y-apertura.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Abraza",
+          "segundos": 2
+        },
+        {
+          "texto": "Abre",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "pecho",
+        "espalda-alta",
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, cruza los brazos por delante como si te dieras un abrazo.",
+        "Después ábrelos hacia los lados y lleva los omóplatos hacia atrás.",
+        "Alterna los dos movimientos con un ritmo suave."
+      ]
+    },
+    {
+      "id": "marcha-con-alcance",
+      "nombre": "Marcha con alcance",
+      "imagen": "marcha-con-alcance.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 2
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "hombros"
+      ],
+      "exigencias": [
+        "equilibrio",
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "De pie, sube una rodilla a la altura de la cadera mientras estiras hacia arriba el brazo del mismo lado.",
+        "Baja y repite con el otro lado, como una marcha lenta."
+      ],
+      "precaucion": "Si pierdes el equilibrio, apóyate en una pared."
+    },
+    {
+      "id": "empuje-de-brazos-atras",
+      "nombre": "Empuje de brazos atrás",
+      "imagen": "empuje-de-brazos-atras.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Atrás",
+          "segundos": 2
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "pecho",
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, con los brazos estirados a los lados del cuerpo.",
+        "Llévalos hacia atrás todo lo que puedas sin forzar, abriendo el pecho.",
+        "Vuelve despacio."
+      ]
+    },
+    {
+      "id": "giro-de-tronco-con-brazos",
+      "nombre": "Giro de tronco con brazos",
+      "imagen": "giro-de-tronco-con-brazos.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Gira",
+          "segundos": 2
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "abdomen",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "rotacion-columna"
+      ],
+      "indicaciones": [
+        "De pie, con un pie adelantado y las rodillas un poco dobladas.",
+        "Gira el tronco y lleva un brazo al frente a la altura del hombro, como un puñetazo lento.",
+        "Vuelve despacio. Al cambiar de lado, adelanta el otro pie y usa el otro brazo."
+      ]
+    },
+    {
+      "id": "elevacion-de-pierna-con-toque",
+      "nombre": "Elevación de pierna con toque",
+      "imagen": "elevacion-de-pierna-con-toque.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 2
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "cadera"
+      ],
+      "exigencias": [
+        "equilibrio",
+        "flexion-columna"
+      ],
+      "indicaciones": [
+        "De pie, eleva una pierna estirada hacia delante.",
+        "Lleva las manos hacia la punta del pie, sin forzar.",
+        "Baja y repite con la otra pierna."
+      ],
+      "precaucion": "Sube la pierna solo hasta donde puedas con la espalda recta. Si pierdes el equilibrio, apóyate en una pared."
+    },
+    {
+      "id": "vuelta-al-mundo",
+      "nombre": "Vuelta al mundo",
+      "imagen": "vuelta-al-mundo.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla",
+        "rotacion-columna"
+      ],
+      "indicaciones": [
+        "Baja a una sentadilla profunda con las manos en el suelo.",
+        "Deja una mano apoyada y abre el otro brazo hacia el techo, girando el tronco.",
+        "Vuelve al centro y abre hacia el otro lado."
+      ],
+      "precaucion": "Si no puedes bajar a una sentadilla profunda, baja menos o pon un libro bajo los talones."
+    },
+    {
+      "id": "balanceo-zancada-lateral",
+      "nombre": "Balanceo en zancada lateral",
+      "imagen": "balanceo-zancada-lateral.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "cadera",
+        "muslos"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Separa mucho los pies, con las puntas algo hacia fuera y las manos juntas delante del pecho.",
+        "Lleva el peso a una pierna doblando la rodilla, con la otra estirada.",
+        "Pasa despacio al otro lado."
+      ],
+      "precaucion": "Mantén la rodilla doblada en la dirección del pie."
+    },
+    {
+      "id": "giros-en-zancada-baja",
+      "nombre": "Giros en zancada baja",
+      "imagen": "giros-en-zancada-baja.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Gira",
+          "segundos": 3
+        },
+        {
+          "texto": "Vuelve",
+          "segundos": 2
+        }
+      ],
+      "porLado": true,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "abdomen",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "apoyo-rodillas",
+        "brazos-por-encima",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte en zancada baja, con la rodilla de atrás apoyada en el suelo.",
+        "Sube el brazo del lado de la pierna de atrás y gira el tronco hacia la pierna de delante.",
+        "Vuelve despacio."
+      ],
+      "precaucion": "Pon un cojín bajo la rodilla apoyada."
+    },
+    {
+      "id": "rotaciones-de-columna",
+      "nombre": "Rotaciones de columna",
+      "imagen": "rotaciones-de-columna.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Abre",
+          "segundos": 3
+        },
+        {
+          "texto": "Baja",
+          "segundos": 2
+        }
+      ],
+      "porLado": true,
+      "posicion": "cuatro-patas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "apoyo-rodillas",
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Ponte a cuatro patas, con las manos bajo los hombros y las rodillas bajo la cadera.",
+        "Sube un brazo hacia el techo girando el pecho y sigue la mano con la mirada.",
+        "Baja el brazo despacio."
+      ],
+      "precaucion": "Pon un cojín bajo las rodillas."
+    },
+    {
+      "id": "cobra-a-postura-del-nino",
+      "nombre": "Cobra a postura del niño",
+      "imagen": "cobra-a-postura-del-nino.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Cobra",
+          "segundos": 3
+        },
+        {
+          "texto": "Atrás",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-abajo",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "espalda-alta"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "flexion-columna",
+        "apoyo-rodillas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca abajo con las manos bajo los hombros y sube el pecho a la cobra.",
+        "Lleva la cadera hacia los talones hasta la postura del niño, sin mover las manos.",
+        "Vuelve a la cobra y repite."
+      ],
+      "precaucion": "Sube el pecho solo hasta donde no notes molestias en la zona lumbar."
+    },
+    {
+      "id": "giros-de-cadera-sentado",
+      "nombre": "Giros de cadera sentado",
+      "imagen": "giros-de-cadera-sentado.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 3
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 3
+        }
+      ],
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate con las manos apoyadas detrás, las rodillas dobladas y los pies algo más separados que la cadera.",
+        "Deja caer las dos rodillas hacia un lado y luego hacia el otro, despacio."
+      ],
+      "precaucion": "Muévete sin forzar las caderas ni las rodillas."
+    },
+    {
+      "id": "mejor-estiramiento-del-mundo",
+      "nombre": "El mejor estiramiento del mundo",
+      "imagen": "mejor-estiramiento-del-mundo.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 5,
+      "fases": [
+        {
+          "texto": "Abre",
+          "segundos": 3
+        },
+        {
+          "texto": "Baja",
+          "segundos": 2
+        }
+      ],
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cadera",
+        "espalda-alta",
+        "muslos"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "apoyo-munecas",
+        "brazos-por-encima",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Da una zancada larga y apoya en el suelo la mano contraria a la pierna de delante, por dentro del pie.",
+        "Sube el otro brazo hacia el techo girando el pecho.",
+        "Baja la mano y repite."
+      ],
+      "precaucion": "Si te cuesta, apoya la rodilla de atrás en el suelo."
+    },
+    {
+      "id": "sentadilla",
+      "nombre": "Sentadilla",
+      "imagen": "sentadilla.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 10,
+      "fases": [
+        {
+          "texto": "Baja",
+          "segundos": 2
+        },
+        {
+          "texto": "Sube",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "muslos",
+        "gluteos"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "De pie, con los pies a la anchura de los hombros y los brazos estirados al frente.",
+        "Baja la cadera hacia atrás como si te sentaras, con la espalda recta y los talones apoyados.",
+        "Sube empujando con los talones."
+      ],
+      "precaucion": "Baja solo hasta donde no notes molestias. Puedes poner una silla detrás como referencia."
+    },
+    {
+      "id": "flexion-a-perro-boca-abajo",
+      "nombre": "Flexión a perro boca abajo",
+      "imagen": "flexion-a-perro-boca-abajo.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 6,
+      "fases": [
+        {
+          "texto": "Flexión",
+          "segundos": 3
+        },
+        {
+          "texto": "Perro",
+          "segundos": 3
+        },
+        {
+          "texto": "Plancha",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "manos-y-pies",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "pecho",
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "brazos-por-encima",
+        "cabeza-abajo",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Desde la plancha, haz una flexión; puedes apoyar las rodillas.",
+        "Al subir, empuja la cadera arriba y atrás hasta el perro boca abajo.",
+        "Vuelve a la plancha y repite."
+      ],
+      "precaucion": "Si te molestan las muñecas o los hombros, haz menos repeticiones."
+    },
+    {
+      "id": "puente-con-marcha",
+      "nombre": "Puente con marcha",
+      "imagen": "puente-con-marcha.png",
+      "clase": "fuerza",
+      "tipo": "dinamico",
+      "repeticiones": 8,
+      "fases": [
+        {
+          "texto": "Derecha",
+          "segundos": 2
+        },
+        {
+          "texto": "Izquierda",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "gluteos",
+        "abdomen"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las rodillas dobladas y sube la cadera al puente.",
+        "Sin bajar la cadera, levanta un pie del suelo y luego el otro, alternando.",
+        "Mantén la cadera alta y quieta."
+      ],
+      "precaucion": "Si se te cae la cadera o notas molestias en la zona lumbar, haz el puente normal."
+    },
+    {
+      "id": "triceps-mano-a-la-espalda",
+      "nombre": "Tríceps con mano a la espalda",
+      "imagen": "triceps-mano-a-la-espalda.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "brazos",
+        "hombros"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Sube un brazo, dobla el codo y baja la mano por la espalda todo lo que puedas.",
+        "Con la otra mano, empuja suavemente el codo hacia atrás.",
+        "Mantén la cabeza recta y la espalda sin arquear."
+      ]
+    },
+    {
+      "id": "circulos-de-brazos",
+      "nombre": "Balanceo de brazos",
+      "imagen": "circulos-de-brazos.png",
+      "clase": "movilidad",
+      "tipo": "continuo",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [],
+      "zonas": [
+        "hombros",
+        "pecho"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, abre los brazos a los lados a la altura de los hombros.",
+        "Balancéalos para cruzarlos por delante del pecho y vuelve a abrirlos, sin parar.",
+        "Alterna el brazo que queda por encima y mantén un ritmo suave."
+      ]
+    },
+    {
+      "id": "manos-atras-sentado",
+      "nombre": "Manos atrás sentado",
+      "imagen": "manos-atras-sentado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "pecho",
+        "hombros"
+      ],
+      "exigencias": [
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Siéntate en el suelo con las piernas estiradas.",
+        "Apoya las manos detrás de ti, con los dedos hacia atrás.",
+        "Lleva el peso hacia las manos y abre el pecho."
+      ],
+      "precaucion": "Si te molestan las muñecas o los hombros, acerca las manos al cuerpo."
+    },
+    {
+      "id": "triceps-con-toalla",
+      "nombre": "Tríceps con toalla",
+      "imagen": "triceps-con-toalla.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "toalla"
+      ],
+      "zonas": [
+        "brazos",
+        "hombros"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Sujeta una toalla por detrás de la espalda: una mano arriba, por detrás de la cabeza, y la otra abajo.",
+        "Tira suavemente hacia abajo con la mano de abajo.",
+        "Notarás el estiramiento en el brazo de arriba."
+      ],
+      "precaucion": "Necesitas una toalla."
+    },
+    {
+      "id": "heroe",
+      "nombre": "Postura del héroe",
+      "imagen": "heroe.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": false,
+      "posicion": "de-rodillas",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "muslos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "flexion-profunda-rodilla",
+        "suelo"
+      ],
+      "indicaciones": [
+        "De rodillas, siéntate sobre los talones.",
+        "Apoya las manos en los muslos y mantén la espalda recta.",
+        "Respira despacio."
+      ],
+      "precaucion": "Si te molestan las rodillas o los tobillos, pon un cojín entre los glúteos y los talones."
+    },
+    {
+      "id": "perro-boca-arriba",
+      "nombre": "Perro boca arriba",
+      "imagen": "perro-boca-arriba.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 20,
+      "porLado": false,
+      "posicion": "boca-abajo",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "abdomen",
+        "zona-lumbar",
+        "pecho"
+      ],
+      "exigencias": [
+        "extension-columna",
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca abajo con las manos junto al pecho.",
+        "Estira los brazos y sube el pecho, con los muslos cerca del suelo.",
+        "Mantén los hombros lejos de las orejas."
+      ],
+      "precaucion": "Es más intenso que la cobra. Si notas molestias en la zona lumbar, haz la cobra."
+    },
+    {
+      "id": "giro-tumbado",
+      "nombre": "Giro tumbado",
+      "imagen": "giro-tumbado.png",
+      "clase": "estiramiento",
+      "tipo": "mantenido",
+      "segundos": 30,
+      "porLado": true,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "zona-lumbar",
+        "espalda-alta",
+        "gluteos"
+      ],
+      "exigencias": [
+        "rotacion-columna",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con los brazos en cruz.",
+        "Dobla las rodillas, déjalas caer hacia un lado y gira la cabeza hacia el otro.",
+        "Mantén los hombros en el suelo."
+      ]
+    },
+    {
+      "id": "postura-del-cadaver",
+      "nombre": "Postura del cadáver",
+      "imagen": "postura-del-cadaver.png",
+      "clase": "relajacion",
+      "tipo": "mantenido",
+      "segundos": 60,
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "cuerpo-completo"
+      ],
+      "exigencias": [
+        "suelo"
+      ],
+      "indicaciones": [
+        "Túmbate boca arriba con las piernas estiradas y los brazos a los lados, con las palmas hacia arriba.",
+        "Cierra los ojos y deja el cuerpo pesado.",
+        "Respira despacio por la nariz."
+      ]
+    },
+    {
+      "id": "press-de-pecho-maquina",
+      "nombre": "Press de pecho en máquina",
+      "imagen": "press-de-pecho-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "pecho",
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Ajusta el asiento para que las asas queden a la altura del pecho.",
+        "Empuja hacia delante hasta casi estirar los brazos, sin bloquear los codos.",
+        "Vuelve despacio, con la espalda apoyada. Suelta el aire al empujar."
+      ],
+      "precaucion": "Si te molesta el hombro al principio del movimiento, reduce el recorrido.",
+      "maquina": "Chest Press (Technogym Selection)"
+    },
+    {
+      "id": "remo-sentado-maquina",
+      "nombre": "Remo sentado en máquina",
+      "imagen": "remo-sentado-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Siéntate erguido y coge las asas con los brazos estirados.",
+        "Tira hacia ti llevando los codos atrás y junta los omóplatos.",
+        "Vuelve despacio hasta estirar los brazos. Suelta el aire al tirar."
+      ],
+      "precaucion": "No eches el tronco hacia atrás para ayudarte.",
+      "maquina": "Low Row (Technogym Selection)"
+    },
+    {
+      "id": "curl-de-piernas-maquina",
+      "nombre": "Curl de piernas en máquina",
+      "imagen": "curl-de-piernas-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "muslos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Ajusta la máquina para que la rodilla quede a la altura de su eje y el rodillo, detrás de los tobillos.",
+        "Dobla las rodillas llevando los talones hacia abajo y atrás.",
+        "Vuelve despacio, sin dejar caer el peso."
+      ],
+      "precaucion": "Si notas un tirón detrás de la rodilla, acorta el recorrido.",
+      "maquina": "Leg Curl / Leg Extension (Technogym)"
+    },
+    {
+      "id": "extension-de-piernas-maquina",
+      "nombre": "Extensión de piernas en máquina",
+      "imagen": "extension-de-piernas-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "muslos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Ajusta la máquina para que la rodilla quede a la altura de su eje y el rodillo, delante de los tobillos.",
+        "Estira las piernas sin bloquear las rodillas.",
+        "Baja despacio, sin dejar caer el peso."
+      ],
+      "precaucion": "Si te molesta la rodilla, reduce el peso o el recorrido.",
+      "maquina": "Leg Curl / Leg Extension (Technogym)"
+    },
+    {
+      "id": "elevacion-lateral-maquina",
+      "nombre": "Elevación lateral en máquina",
+      "imagen": "elevacion-lateral-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Ajusta el asiento para que los hombros queden a la altura del eje de la máquina.",
+        "Sube los brazos hacia los lados, como mucho hasta la altura de los hombros.",
+        "Baja despacio."
+      ],
+      "precaucion": "Si te molesta el hombro, sube menos.",
+      "maquina": "Delts Machine (Technogym Selection)"
+    },
+    {
+      "id": "prensa-de-piernas",
+      "nombre": "Prensa de piernas",
+      "imagen": "prensa-de-piernas.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "muslos",
+        "gluteos"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla"
+      ],
+      "indicaciones": [
+        "Apoya bien la espalda y pon los pies en la plataforma, a la anchura de las caderas.",
+        "Empuja hasta casi estirar las piernas, sin bloquear las rodillas.",
+        "Vuelve despacio, sin despegar la zona lumbar del respaldo. Suelta el aire al empujar."
+      ],
+      "precaucion": "No dejes que las rodillas se vayan hacia dentro.",
+      "maquina": "Leg Press (Technogym Selection)"
+    },
+    {
+      "id": "crunch-abdominal-maquina",
+      "nombre": "Crunch abdominal en máquina",
+      "imagen": "crunch-abdominal-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "abdomen"
+      ],
+      "exigencias": [
+        "flexion-columna"
+      ],
+      "indicaciones": [
+        "Ajusta el asiento y sujeta las asas sin tirar con los brazos.",
+        "Dobla el tronco hacia delante, acercando el pecho a las rodillas.",
+        "Vuelve despacio. Suelta el aire al doblarte."
+      ],
+      "precaucion": "Si te molesta la zona lumbar o el cuello, sáltalo.",
+      "maquina": "Abdominal Crunch (Technogym Selection)"
+    },
+    {
+      "id": "jalon-vertical-maquina",
+      "nombre": "Jalón vertical en máquina",
+      "imagen": "jalon-vertical-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Ajusta el asiento y coge las asas con los brazos por encima de la cabeza.",
+        "Tira hacia abajo llevando los codos hacia las costillas.",
+        "Sube despacio hasta casi estirar los brazos. Suelta el aire al tirar."
+      ],
+      "precaucion": "Si te molesta el hombro arriba, no estires del todo los brazos.",
+      "maquina": "Vertical Traction (Technogym Selection)"
+    },
+    {
+      "id": "press-de-hombros-maquina",
+      "nombre": "Press de hombros en máquina",
+      "imagen": "press-de-hombros-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Ajusta el asiento para que las asas queden a la altura de los hombros. Usa el agarre estrecho.",
+        "Empuja hacia arriba sin bloquear los codos.",
+        "Baja despacio. Suelta el aire al empujar."
+      ],
+      "precaucion": "Si te molesta el hombro, reduce el recorrido o cambia de ejercicio.",
+      "maquina": "Shoulder Press (Technogym Selection)"
+    },
+    {
+      "id": "curl-de-biceps-maquina",
+      "nombre": "Curl de bíceps en máquina",
+      "imagen": "curl-de-biceps-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "brazos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Apoya los brazos en el soporte, con los codos a la altura del eje de la máquina.",
+        "Dobla los codos subiendo las asas.",
+        "Baja despacio hasta casi estirar los brazos."
+      ],
+      "maquina": "Arm Curl (Technogym Selection)"
+    },
+    {
+      "id": "extension-de-triceps-maquina",
+      "nombre": "Extensión de tríceps en máquina",
+      "imagen": "extension-de-triceps-maquina.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "sentado",
+      "equipo": [
+        "maquina"
+      ],
+      "zonas": [
+        "brazos"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "Apoya los brazos en el soporte, con los codos a la altura del eje de la máquina.",
+        "Estira los codos empujando las asas, sin bloquearlos.",
+        "Vuelve despacio."
+      ],
+      "maquina": "Arm Extension (Technogym Selection)"
+    },
+    {
+      "id": "plancha-con-saltos",
+      "nombre": "Plancha con apertura de piernas",
+      "imagen": "plancha-con-saltos.png",
+      "clase": "cardio",
+      "tipo": "series",
+      "repeticiones": 14,
+      "porLado": false,
+      "posicion": "manos-y-pies",
+      "equipo": [
+        "esterilla"
+      ],
+      "zonas": [
+        "abdomen",
+        "hombros",
+        "cuerpo-completo"
+      ],
+      "exigencias": [
+        "impacto",
+        "apoyo-munecas",
+        "suelo"
+      ],
+      "indicaciones": [
+        "Colócate en plancha, con las manos bajo los hombros y el cuerpo recto.",
+        "Abre y cierra las piernas con pequeños saltos, sin subir la cadera.",
+        "Respira de forma continua."
+      ],
+      "precaucion": "Sin saltos: lleva una pierna hacia fuera y luego la otra."
+    },
+    {
+      "id": "sentadilla-goblet",
+      "nombre": "Sentadilla goblet con pesa rusa",
+      "imagen": "sentadilla-goblet.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "pesa-rusa"
+      ],
+      "zonas": [
+        "muslos",
+        "gluteos"
+      ],
+      "exigencias": [
+        "flexion-profunda-rodilla",
+        "carga-columna"
+      ],
+      "indicaciones": [
+        "Sujeta la pesa rusa con las dos manos contra el pecho.",
+        "Baja la cadera como si te sentaras, con el pecho erguido y las rodillas hacia las puntas de los pies.",
+        "Sube empujando con los talones. Suelta el aire al subir."
+      ],
+      "precaucion": "Baja solo hasta donde mantengas la espalda recta y sin molestias."
+    },
+    {
+      "id": "press-frances-inclinado",
+      "nombre": "Press francés en banco inclinado",
+      "imagen": "press-frances-inclinado.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": false,
+      "posicion": "boca-arriba",
+      "equipo": [
+        "mancuernas",
+        "banco"
+      ],
+      "zonas": [
+        "brazos"
+      ],
+      "exigencias": [
+        "brazos-por-encima"
+      ],
+      "indicaciones": [
+        "Túmbate en el banco inclinado con los brazos estirados hacia arriba y las mancuernas en las manos.",
+        "Dobla solo los codos para bajar las mancuernas hacia detrás de la cabeza.",
+        "Estira los codos para volver arriba, sin mover los hombros."
+      ],
+      "precaucion": "Baja despacio y con control: las mancuernas pasan cerca de la cabeza."
+    },
+    {
+      "id": "elevacion-lateral-un-brazo",
+      "nombre": "Elevación lateral a un brazo",
+      "imagen": "elevacion-lateral-un-brazo.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "mancuernas"
+      ],
+      "zonas": [
+        "hombros"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, con una mancuerna en una mano. Con la otra puedes sujetarte a un apoyo.",
+        "Sube el brazo hacia el lado, con el codo un poco doblado, hasta la altura del hombro.",
+        "Baja despacio."
+      ],
+      "precaucion": "No subas por encima del hombro ni encojas el cuello."
+    },
+    {
+      "id": "remo-un-brazo-mancuerna",
+      "nombre": "Remo a un brazo con mancuerna",
+      "imagen": "remo-un-brazo-mancuerna.png",
+      "clase": "fuerza",
+      "tipo": "series",
+      "repeticiones": 10,
+      "porLado": true,
+      "posicion": "de-pie",
+      "equipo": [
+        "mancuernas",
+        "banco"
+      ],
+      "zonas": [
+        "espalda-alta",
+        "hombros",
+        "brazos"
+      ],
+      "exigencias": [
+        "apoyo-rodillas",
+        "apoyo-munecas"
+      ],
+      "indicaciones": [
+        "Apoya en el banco una mano y la rodilla del mismo lado, con la espalda recta.",
+        "Tira de la mancuerna hacia la cadera llevando el codo hacia atrás.",
+        "Baja despacio hasta estirar el brazo. Suelta el aire al tirar."
+      ],
+      "precaucion": "No gires el tronco al tirar."
+    },
+    {
+      "id": "peso-muerto-rumano-palo",
+      "nombre": "Peso muerto rumano con palo",
+      "imagen": "peso-muerto-rumano-palo.png",
+      "clase": "movilidad",
+      "tipo": "dinamico",
+      "repeticiones": 14,
+      "fases": [
+        {
+          "texto": "Baja llevando la cadera atrás",
+          "segundos": 3
+        },
+        {
+          "texto": "Sube",
+          "segundos": 2
+        }
+      ],
+      "porLado": false,
+      "posicion": "de-pie",
+      "equipo": [
+        "palo"
+      ],
+      "zonas": [
+        "muslos",
+        "gluteos",
+        "zona-lumbar"
+      ],
+      "exigencias": [],
+      "indicaciones": [
+        "De pie, sujeta el palo con las dos manos delante de los muslos, como una barra.",
+        "Inclínate llevando la cadera atrás y deslizando el palo por los muslos, con la espalda recta y las rodillas un poco dobladas.",
+        "Sube empujando la cadera hacia delante y apretando los glúteos."
+      ],
+      "precaucion": "Baja solo hasta notar tensión detrás de los muslos, sin redondear la espalda."
+    }
+  ],
+  "rutinas": [
+    {
+      "id": "espalda",
+      "nombre": "Espalda",
+      "categoria": "Espalda",
+      "favorita": true,
+      "ejercicios": [
+        "inclinacion-pelvica",
+        "gato-vaca",
+        "rodilla-al-pecho",
+        "puente",
+        "flexor-de-cadera-arrodillado",
+        "giro-sentado",
+        "postura-del-nino",
+        "piernas-en-la-pared"
+      ]
+    },
+    {
+      "id": "cuerpo-completo",
+      "nombre": "Cuerpo completo",
+      "categoria": "Cuerpo completo",
+      "favorita": true,
+      "ejercicios": [
+        "estiramiento-cuello",
+        "estiramiento-hombro",
+        "estiramiento-triceps",
+        "cuadriceps-de-pie",
+        "estiramiento-pelvico",
+        "flexion-hacia-delante"
+      ]
+    },
+    {
+      "id": "espalda-movilidad-y-fuerza",
+      "nombre": "Espalda: movilidad y fuerza",
+      "categoria": "Espalda",
+      "favorita": false,
+      "ejercicios": [
+        "gluteos-a-talones",
+        "brazo-y-pierna-opuestos",
+        "extensiones-de-espalda",
+        "puente",
+        "rodillas-a-los-lados"
+      ]
+    },
+    {
+      "id": "espalda-alta",
+      "nombre": "Espalda alta",
+      "categoria": "Espalda",
+      "favorita": false,
+      "ejercicios": [
+        "postura-del-nino",
+        "mariposa-con-flexion",
+        "luna-creciente",
+        "pinza-sentada",
+        "rodillo-espalda-alta",
+        "estiramiento-lateral-arrodillado",
+        "giro-sentado",
+        "rana",
+        "deslizamiento-en-pared"
+      ]
+    },
+    {
+      "id": "cuerpo-completo-10-minutos",
+      "nombre": "Cuerpo completo en 10 minutos",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "cuadriceps-de-pie",
+        "flexion-hacia-delante",
+        "zancada-lateral",
+        "flexor-de-cadera-arrodillado",
+        "rodilla-al-pecho",
+        "estiramiento-de-gluteo",
+        "perro-boca-abajo",
+        {
+          "id": "cobra",
+          "segundos": 30
+        },
+        "postura-del-nino"
+      ]
+    },
+    {
+      "id": "flexibilidad",
+      "nombre": "Flexibilidad",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "estiramiento-lateral-de-pie",
+        "apertura-de-pecho",
+        "estiramiento-triceps",
+        "apertura-de-brazos",
+        "giro-sentado",
+        "mariposa",
+        "cuadriceps-de-pie",
+        "pinza-sentada",
+        "gemelo-en-pared",
+        "flexion-hacia-delante"
+      ]
+    },
+    {
+      "id": "estiramiento-completo-a",
+      "nombre": "Estiramiento completo A",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "cuadriceps-de-pie",
+        "flexion-hacia-delante",
+        "zancada-lateral",
+        "flexor-de-cadera-arrodillado",
+        "rodilla-al-pecho",
+        "estiramiento-de-gluteo",
+        "perro-boca-abajo",
+        "cobra",
+        "postura-del-nino"
+      ]
+    },
+    {
+      "id": "estiramiento-completo-b",
+      "nombre": "Estiramiento completo B",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "cuadriceps-de-pie",
+        "flexion-hacia-delante",
+        "zancada-lateral",
+        "flexor-de-cadera-arrodillado",
+        "estiramiento-de-gluteo-sentado",
+        "perro-boca-abajo",
+        "cobra",
+        "postura-del-nino",
+        "enhebrar-la-aguja"
+      ]
+    },
+    {
+      "id": "movilidad-cuerpo-completo",
+      "nombre": "Movilidad de cuerpo completo",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "giro-sentado",
+        "mariposa",
+        "cobra",
+        "perro-boca-abajo",
+        "zancada-profunda",
+        "medio-split",
+        "luna-creciente",
+        "lagarto",
+        "sentadilla-profunda",
+        "camello",
+        "paloma",
+        "postura-del-nino"
+      ]
+    },
+    {
+      "id": "movilidad-diaria",
+      "nombre": "Movilidad diaria",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "cabeza-a-rodilla",
+        "flexion-hacia-delante",
+        "gato-vaca",
+        "perro-arriba-abajo",
+        "zancada-con-giro",
+        "cara-de-vaca"
+      ]
+    },
+    {
+      "id": "reinicio-diario",
+      "nombre": "Reinicio diario",
+      "categoria": "Cuerpo completo",
+      "favorita": false,
+      "ejercicios": [
+        "circulos-de-cabeza",
+        "pases-de-hombro-con-palo",
+        "gato-vaca",
+        "flexor-de-cadera-arrodillado",
+        "pinza-sentada"
+      ]
+    },
+    {
+      "id": "movilidad-matinal",
+      "nombre": "Movilidad matinal",
+      "categoria": "Mañana",
+      "favorita": false,
+      "ejercicios": [
+        "rodilla-al-pecho",
+        "cobra",
+        "flexion-hacia-delante",
+        "flexion-piernas-cruzadas",
+        "flexor-de-cadera-arrodillado"
+      ]
+    },
+    {
+      "id": "estiramiento-matinal",
+      "nombre": "Estiramiento matinal",
+      "categoria": "Mañana",
+      "favorita": false,
+      "ejercicios": [
+        "extension-de-cuello",
+        "flexion-de-cuello",
+        "estiramiento-cuello",
+        "rotacion-de-cuello",
+        "estiramiento-brazos-arriba",
+        "estiramiento-triceps",
+        "estiramiento-hombro",
+        "autoabrazo",
+        "extension-de-tronco-de-pie",
+        "inclinacion-lateral",
+        "giro-de-tronco-de-pie",
+        "descarga-lumbar-de-pie"
+      ]
+    },
+    {
+      "id": "antiestres-expres",
+      "nombre": "Antiestrés exprés",
+      "categoria": "Rápidas",
+      "favorita": false,
+      "ejercicios": [
+        {
+          "id": "manos-entrelazadas-atras",
+          "segundos": 10
+        },
+        {
+          "id": "rotaciones-de-hombros",
+          "segundos": 10
+        },
+        {
+          "id": "estiramiento-hombro",
+          "segundos": 10
+        },
+        {
+          "id": "apertura-de-brazos",
+          "segundos": 10
+        },
+        {
+          "id": "alcance-arriba",
+          "segundos": 10
+        },
+        {
+          "id": "flexion-hacia-delante",
+          "segundos": 10
+        }
+      ]
+    },
+    {
+      "id": "movilidad-expres",
+      "nombre": "Movilidad exprés",
+      "categoria": "Rápidas",
+      "favorita": false,
+      "ejercicios": [
+        {
+          "id": "vuelta-al-mundo",
+          "repeticiones": 4
+        },
+        {
+          "id": "balanceo-zancada-lateral",
+          "repeticiones": 4
+        },
+        {
+          "id": "giros-en-zancada-baja",
+          "repeticiones": 4
+        },
+        {
+          "id": "rotaciones-de-columna",
+          "repeticiones": 4
+        },
+        {
+          "id": "cobra-a-postura-del-nino",
+          "repeticiones": 4
+        },
+        {
+          "id": "giros-de-cadera-sentado",
+          "repeticiones": 4
+        }
+      ]
+    },
+    {
+      "id": "hombros",
+      "nombre": "Hombros",
+      "categoria": "Hombros y brazos",
+      "favorita": false,
+      "ejercicios": [
+        "flexion-hacia-delante",
+        "estiramiento-triceps",
+        "rotaciones-de-hombros",
+        "deslizamiento-en-pared",
+        "enhebrar-la-aguja",
+        "postura-del-nino",
+        "brazos-de-aguila",
+        "gato-vaca"
+      ]
+    },
+    {
+      "id": "triceps",
+      "nombre": "Tríceps",
+      "categoria": "Hombros y brazos",
+      "favorita": false,
+      "ejercicios": [
+        "estiramiento-triceps",
+        "triceps-mano-a-la-espalda",
+        "estiramiento-hombro",
+        "circulos-de-brazos",
+        "manos-atras-sentado",
+        "triceps-con-toalla"
+      ]
+    },
+    {
+      "id": "calentamiento-dinamico",
+      "nombre": "Calentamiento dinámico",
+      "categoria": "Calentamiento y fuerza",
+      "favorita": false,
+      "ejercicios": [
+        "balanceo-frontal-de-pierna",
+        "balanceo-lateral-de-pierna",
+        "caminata-a-plancha",
+        "zancada-con-giro",
+        "abrazo-y-apertura",
+        "marcha-con-alcance",
+        "empuje-de-brazos-atras",
+        "giro-de-tronco-con-brazos",
+        "elevacion-de-pierna-con-toque"
+      ]
+    },
+    {
+      "id": "movilidad-y-fuerza",
+      "nombre": "Movilidad y fuerza",
+      "categoria": "Calentamiento y fuerza",
+      "favorita": false,
+      "ejercicios": [
+        "mejor-estiramiento-del-mundo",
+        "sentadilla",
+        "flexion-a-perro-boca-abajo",
+        "zancada-con-giro",
+        "puente-con-marcha"
+      ]
+    },
+    {
+      "id": "movilidad-activa",
+      "nombre": "Movilidad activa",
+      "categoria": "Calentamiento y fuerza",
+      "favorita": false,
+      "ejercicios": [
+        "saltos-de-tijera",
+        "flexion-inclinada",
+        "plancha-alta",
+        "sentadilla-sumo",
+        "talones-al-gluteo",
+        "gato-vaca"
+      ]
+    },
+    {
+      "id": "yoga-para-dormir",
+      "nombre": "Yoga para dormir",
+      "categoria": "Relajación",
+      "favorita": false,
+      "ejercicios": [
+        "heroe",
+        "postura-del-nino",
+        "perro-boca-arriba",
+        "camello",
+        "mariposa-con-flexion",
+        "giro-tumbado",
+        "puente",
+        "rodilla-al-pecho",
+        "postura-del-cadaver"
+      ]
+    }
+  ]
+}

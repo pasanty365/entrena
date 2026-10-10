@@ -1,0 +1,136 @@
+{
+  "id": "ejemplo-fuerza-en-casa",
+  "fecha": null,
+  "titulo": "Fuerza en casa (ejemplo)",
+  "lugar": "casa",
+  "duracionMinutos": 28,
+  "motivo": "Sesión fija de ejemplo para probar el reproductor: calentamiento, fuerza con el peso del cuerpo y vuelta a la calma.",
+  "avisos": [
+    "Esta sesión es un ejemplo fijo: no la ha planificado el entrenador."
+  ],
+  "alarma": false,
+  "bloques": [
+    {
+      "tipo": "calentamiento",
+      "ejercicios": [
+        {
+          "id": "gato-vaca",
+          "series": 1,
+          "repeticiones": 10
+        },
+        {
+          "id": "marcha-con-alcance",
+          "series": 1,
+          "repeticiones": 10
+        },
+        {
+          "id": "rotaciones-de-hombros",
+          "series": 1,
+          "segundos": 30
+        },
+        {
+          "id": "circulos-de-brazos",
+          "series": 1,
+          "segundos": 30
+        },
+        {
+          "id": "abrazo-y-apertura",
+          "series": 1,
+          "repeticiones": 10
+        },
+        {
+          "id": "empuje-de-brazos-atras",
+          "series": 1,
+          "repeticiones": 10
+        },
+        {
+          "id": "balanceo-frontal-de-pierna",
+          "series": 1,
+          "segundos": 20
+        },
+        {
+          "id": "balanceo-lateral-de-pierna",
+          "series": 1,
+          "segundos": 20
+        }
+      ]
+    },
+    {
+      "tipo": "fuerza",
+      "ejercicios": [
+        {
+          "id": "sentadilla",
+          "series": 3,
+          "repeticiones": 10,
+          "pesoKg": null,
+          "descansoSegundos": 60,
+          "rir": 2,
+          "notas": "Baja solo hasta donde estés cómodo.",
+          "alternativas": [
+            "puente"
+          ]
+        },
+        {
+          "id": "flexion-inclinada",
+          "series": 3,
+          "repeticiones": 8,
+          "pesoKg": null,
+          "descansoSegundos": 60,
+          "rir": 2,
+          "alternativas": [
+            "plancha-alta"
+          ]
+        },
+        {
+          "id": "puente",
+          "series": 3,
+          "repeticiones": 12,
+          "pesoKg": null,
+          "descansoSegundos": 45,
+          "rir": 2,
+          "alternativas": [
+            "puente-con-marcha"
+          ]
+        },
+        {
+          "id": "brazo-y-pierna-opuestos",
+          "series": 2,
+          "repeticiones": 5,
+          "pesoKg": null,
+          "descansoSegundos": 45,
+          "rir": 3
+        },
+        {
+          "id": "plancha-alta",
+          "series": 2,
+          "segundos": 20,
+          "descansoSegundos": 45,
+          "alternativas": [
+            "brazo-y-pierna-opuestos"
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "vuelta-a-la-calma",
+      "ejercicios": [
+        {
+          "id": "estiramiento-de-gluteo",
+          "series": 1,
+          "segundos": 30
+        },
+        {
+          "id": "flexor-de-cadera-arrodillado",
+          "series": 1,
+          "segundos": 30
+        },
+        {
+          "id": "postura-del-nino",
+          "series": 1,
+          "segundos": 30
+        }
+      ]
+    }
+  ],
+  "ejerciciosNuevos": []
+}
