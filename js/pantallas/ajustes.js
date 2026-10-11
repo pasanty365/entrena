@@ -262,7 +262,7 @@ export async function ajustes(app) {
   function hacerPruebaDeSonido() {
     cajaDeDiagnostico.hidden = false;
     botonCopiar.hidden = false;
-    cajaDeDiagnostico.value = 'Escucha: un pitido ahora, otro a los 5 segundos, otro a los 8 y al final la voz. Entre el primero y el segundo se graba 2 segundos con el micrófono (puede pedir permiso). No toques nada durante 10 segundos…';
+    cajaDeDiagnostico.value = 'Escucha: un pitido ahora; después se graban 2 segundos con el micrófono (si pide permiso, acéptalo); luego dos pitidos más y al final la voz. No toques nada más hasta que salga el resultado, unos 10 segundos…';
     probarSonidoConRetraso((lineas) => {
       cajaDeDiagnostico.value = [
         ...lineas,
@@ -339,7 +339,7 @@ export async function ajustes(app) {
         h('p', { class: 'suave pequeno' }, 'Provisional: graba y reproduce, sin enviar nada. Sirve para saber si se podrá hablar con el entrenador.'),
         lineasDeEstado.map((linea) => h('p', { class: 'suave pequeno' }, linea)),
         h('button', { class: 'boton', onclick: hacerPruebaDeSonido }, 'Prueba de sonido con retraso'),
-        h('p', { class: 'suave pequeno' }, 'Tienen que oírse tres pitidos (al pulsar, a los 5 segundos y a los 8) y al final la voz. Entre el primero y el segundo graba 2 segundos con el micrófono: lo grabado no se guarda ni se envía. Sirve para saber si los pitidos suenan cuando los lanza el temporizador, y si todo sigue sonando después de grabar.'),
+        h('p', { class: 'suave pequeno' }, 'Tienen que oírse tres pitidos (uno al pulsar y dos más después de grabar) y al final la voz. Tras el primer pitido graba 2 segundos con el micrófono: lo grabado no se guarda ni se envía. Sirve para saber si los pitidos suenan cuando los lanza el temporizador, y si todo sigue sonando después de grabar.'),
         h('button', { class: 'boton', onclick: hacerDiagnostico }, 'Diagnóstico de voces'),
         h('p', { class: 'suave pequeno' }, 'Dice una frase y enseña todas las voces que da el dispositivo y cuál usa la app. Es un texto para copiar y pegar.'),
         cajaDeDiagnostico,
