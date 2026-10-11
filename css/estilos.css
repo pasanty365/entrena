@@ -649,6 +649,16 @@ details.grupo > p {
   min-height: var(--alto-boton);
 }
 
+/* Diagnóstico de voces: texto para copiar, con letra pequeña y de ancho fijo. */
+.diagnostico {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  white-space: pre;
+  overflow: auto;
+  resize: vertical;
+}
+
 /* ---- Prueba del micrófono (provisional) ---- */
 
 .boton-hablar {

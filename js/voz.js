@@ -135,14 +135,52 @@ export function etiquetaDeVoz(voz) {
   return partes.join(' · ');
 }
 
+// Texto para copiar y pegar con todo lo que se sabe de las voces del dispositivo. Sirve para
+// averiguar por qué una voz no cambia o no aparece: si es cosa de la app o un límite del iPhone.
+//   voces:   todas las que da el dispositivo (no solo las de español), tal cual.
+//   elegida: el identificador guardado en Ajustes (o null).
+//   enUso:   la voz que la app pone en cada frase.
+//   ultima:  lo que pasó con la última frase dicha ({ texto, voz, idioma, eventos }).
+//   entorno: datos sueltos del dispositivo ({ clave: valor }).
+export function diagnosticoDeVoces({ voces = [], elegida = null, enUso = null, ultima = null, entorno = {} } = {}) {
+  const siNo = (valor) => (valor === true ? 'sí' : valor === false ? 'no' : '?');
+  const linea = (voz, i) =>
+    `${String(i + 1).padStart(2, ' ')}. ${voz.name} | ${voz.lang} | ${voz.voiceURI || '(sin identificador)'} | local: ${siNo(voz.localService)} | por defecto: ${siNo(voz.default)}`;
+  const esEspanol = (voz) => idiomaNormal(voz.lang).startsWith('es');
+  const espanol = voces.filter(esEspanol);
+  const resto = voces.filter((voz) => !esEspanol(voz));
+  const lineas = ['DIAGNÓSTICO DE VOCES DE ENTRENA'];
+  for (const [clave, valor] of Object.entries(entorno)) lineas.push(`${clave}: ${valor}`);
+  lineas.push(
+    `Voces que da el dispositivo: ${voces.length} (en español: ${espanol.length})`,
+    `Voz elegida en Ajustes: ${elegida ?? 'automática'}`,
+    `Voz que la app pone en la frase: ${enUso ? `${enUso.name} | ${enUso.lang} | ${idDeVoz(enUso)}` : 'ninguna (decide el dispositivo)'}`,
+    `¿La elegida sigue en la lista?: ${elegida ? siNo(voces.some((voz) => idDeVoz(voz) === elegida)) : 'no aplica'}`,
+  );
+  if (ultima) {
+    lineas.push(
+      `Última frase: «${ultima.texto}»`,
+      `  voz puesta: ${ultima.voz ?? 'ninguna'} | idioma puesto: ${ultima.idioma}`,
+      `  lo que contestó el dispositivo: ${ultima.eventos.length > 0 ? ultima.eventos.join(', ') : 'nada todavía'}`,
+    );
+  } else {
+    lineas.push('Última frase: ninguna todavía');
+  }
+  lineas.push('', 'EN ESPAÑOL (nombre | idioma | identificador | local | por defecto)', ...(espanol.length > 0 ? espanol.map(linea) : ['(ninguna)']));
+  lineas.push('', 'RESTO', ...(resto.length > 0 ? resto.map(linea) : ['(ninguna)']));
+  return lineas.join('\n');
+}
+
 export function crearVoz({
   sintetizador = globalThis.speechSynthesis ?? null,
   CrearFrase = globalThis.SpeechSynthesisUtterance ?? null,
+  navegador = globalThis.navigator ?? null,
   config = CONFIG,
 } = {}) {
   const disponible = Boolean(sintetizador && CrearFrase);
   let activa = true;
   let preferida = null; // la voz elegida en Ajustes, o null para la automática
+  let ultima = null; // lo que pasó con la última frase, para el diagnóstico
 
   // `con` fuerza una voz concreta para esa frase: lo usa el botón «Oír» de Ajustes.
   function decir(texto, { interrumpir = false, con = undefined, aunqueEsteApagada = false } = {}) {
@@ -153,8 +191,24 @@ export function crearVoz({
     // Con una voz elegida de otro país, la frase lleva el idioma de esa voz.
     frase.lang = voz?.lang ? String(voz.lang).replace('_', '-') : config.idiomaDeVoz;
     if (voz) frase.voice = voz;
+    // Se apunta qué se pidió y qué contesta el dispositivo, para el diagnóstico de Ajustes.
+    const apunte = { texto, voz: voz ? `${voz.name} | ${idDeVoz(voz)}` : null, idioma: frase.lang, eventos: [] };
+    ultima = apunte;
+    frase.onstart = (evento) => apunte.eventos.push(`empezó (voz según el dispositivo: ${evento?.utterance?.voice?.name ?? 'no lo dice'})`);
+    frase.onend = () => apunte.eventos.push('terminó');
+    frase.onerror = (evento) => apunte.eventos.push(`error: ${evento?.error ?? 'desconocido'}`);
     sintetizador.speak(frase);
     return true;
+  }
+
+  // Modo de sonido que no hace caso del interruptor de silencio del iPhone (sección 9).
+  // Hay que pedirlo dentro de un toque, y lo necesita cualquier botón que haga hablar a la app.
+  function sonarAunqueEsteEnSilencio() {
+    try {
+      if (navegador?.audioSession) navegador.audioSession.type = 'playback';
+    } catch {
+      // Si el navegador no deja cambiarlo, se sigue sin ello.
+    }
   }
 
   return {
@@ -162,6 +216,7 @@ export function crearVoz({
     decir,
     // Se llama dentro del toque de «Empezar».
     desbloquear() {
+      sonarAunqueEsteEnSilencio();
       if (!disponible) return;
       sintetizador.cancel();
       sintetizador.resume?.();
@@ -174,6 +229,9 @@ export function crearVoz({
       if (!activa) this.callar();
     },
     estaActiva: () => activa,
+    // Para el diagnóstico: todas las voces tal cual las da el dispositivo, y la última frase dicha.
+    todasLasVoces: () => (disponible ? Array.from(sintetizador.getVoices()) : []),
+    ultimaLocucion: () => ultima,
     // Voz elegida en Ajustes (su identificador), o null para dejar la automática.
     elegir(id) {
       preferida = id || null;

@@ -8,7 +8,7 @@
 // del contenido de los archivos: si cambia cualquiera, cambia la versión, el navegador instala
 // la copia nueva entera y borra la vieja. Así no se mezclan archivos viejos con nuevos.
 
-const VERSION = 'bc924956dc37';
+const VERSION = '7d88c9705167';
 const ARCHIVOS = [
   './',
   'index.html',

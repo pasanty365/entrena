@@ -4,7 +4,7 @@
 import { importarImagenes, importarSesiones } from '../almacen.js';
 import { CONFIG } from '../config.js';
 import { h, pantalla, poner } from '../dom.js';
-import { etiquetaDeVoz, idDeVoz } from '../voz.js';
+import { diagnosticoDeVoces, etiquetaDeVoz, idDeVoz } from '../voz.js';
 
 export async function ajustes(app) {
   const mensaje = h('p', { class: 'aviso', role: 'status', hidden: true });
@@ -52,6 +52,7 @@ export async function ajustes(app) {
   }
 
   function oir(id) {
+    // `desbloquear` pide también el modo de sonido que no hace caso del interruptor de silencio.
     app.voz.desbloquear();
     app.voz.decir(FRASE_DE_PRUEBA, { interrumpir: true, con: id, aunqueEsteApagada: true });
   }
@@ -163,6 +164,15 @@ export async function ajustes(app) {
       persistente = null;
     }
     const copia = Boolean(navigator.serviceWorker?.controller);
+    // La versión es el nombre de la copia que guarda el service worker («entrena-<versión>»).
+    let version = null;
+    try {
+      const nombres = (await globalThis.caches?.keys()) ?? [];
+      version = nombres.find((nombre) => nombre.startsWith('entrena-'))?.slice('entrena-'.length) ?? null;
+    } catch {
+      version = null;
+    }
+    app.version = version ?? 'sin copia instalada';
     return [
       instalada ? 'Abierta como app instalada.' : 'Abierta en el navegador, no como app instalada.',
       copia ? 'Copia para el modo avión: lista.' : 'Copia para el modo avión: todavía no (o no disponible aquí).',
@@ -171,9 +181,71 @@ export async function ajustes(app) {
         : persistente
           ? 'El dispositivo ha aceptado conservar los datos.'
           : 'El dispositivo no garantiza conservar los datos.',
+      `Versión de la app: ${app.version}.`,
     ];
   }
   const lineasDeEstado = await estadoDeLaApp();
+
+  // ---- Diagnóstico de voces: un texto para copiar y pegar ----
+  const cajaDeDiagnostico = h('textarea', {
+    class: 'campo diagnostico',
+    readOnly: true,
+    rows: 12,
+    hidden: true,
+    'aria-label': 'Diagnóstico de voces',
+  });
+  const botonCopiar = h('button', { class: 'boton', hidden: true }, 'Copiar el diagnóstico');
+
+  function textoDelDiagnostico() {
+    let modoDeSonido = 'no disponible en este navegador';
+    try {
+      if (navigator.audioSession) modoDeSonido = navigator.audioSession.type;
+    } catch {
+      modoDeSonido = 'no se puede leer';
+    }
+    return diagnosticoDeVoces({
+      voces: app.voz.todasLasVoces(),
+      elegida: app.voz.vozElegida(),
+      enUso: app.voz.vozEnUso(),
+      ultima: app.voz.ultimaLocucion(),
+      entorno: {
+        Fecha: new Date().toISOString(),
+        'Versión de la app': app.version ?? 'desconocida',
+        'App instalada': lineasDeEstado[0],
+        'Modo de sonido': modoDeSonido,
+        'Interruptor de voz de la app': app.voz.estaActiva() ? 'encendido' : 'apagado',
+        Navegador: navigator.userAgent,
+      },
+    });
+  }
+
+  // Dice una frase con la voz que usa la app, espera a ver qué contesta el dispositivo y lo enseña.
+  async function hacerDiagnostico() {
+    app.voz.desbloquear();
+    app.voz.decir('Esta es la voz que usa Entrena.', { interrumpir: true, aunqueEsteApagada: true });
+    cajaDeDiagnostico.hidden = false;
+    botonCopiar.hidden = false;
+    cajaDeDiagnostico.value = 'Probando la voz…';
+    // Hasta 6 segundos para que la frase empiece y termine (o falle).
+    for (let i = 0; i < 24; i += 1) {
+      await new Promise((resolver) => setTimeout(resolver, 250));
+      const eventos = app.voz.ultimaLocucion()?.eventos ?? [];
+      if (eventos.some((evento) => evento === 'terminó' || evento.startsWith('error'))) break;
+    }
+    cajaDeDiagnostico.value = textoDelDiagnostico();
+  }
+
+  botonCopiar.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(cajaDeDiagnostico.value);
+      decir('Diagnóstico copiado. Pégalo en el mensaje.');
+    } catch {
+      // Si el dispositivo no deja copiar desde un botón, se deja el texto seleccionado.
+      cajaDeDiagnostico.focus();
+      cajaDeDiagnostico.select();
+      decir('No se ha podido copiar solo. El texto está seleccionado: pulsa «Copiar» en el menú.');
+    }
+  });
 
   // Un botón que abre el selector de archivos del sistema.
   const botonDeArchivo = (texto, opciones, alElegir) =>
@@ -239,6 +311,10 @@ export async function ajustes(app) {
         h('button', { class: 'boton', onclick: () => app.ir('microfono') }, 'Prueba del micrófono'),
         h('p', { class: 'suave pequeno' }, 'Provisional: graba y reproduce, sin enviar nada. Sirve para saber si se podrá hablar con el entrenador.'),
         lineasDeEstado.map((linea) => h('p', { class: 'suave pequeno' }, linea)),
+        h('button', { class: 'boton', onclick: hacerDiagnostico }, 'Diagnóstico de voces'),
+        h('p', { class: 'suave pequeno' }, 'Dice una frase y enseña todas las voces que da el dispositivo y cuál usa la app. Es un texto para copiar y pegar.'),
+        cajaDeDiagnostico,
+        botonCopiar,
       ),
       h('p', { class: 'aviso' }, CONFIG.avisoInicial),
     ],
