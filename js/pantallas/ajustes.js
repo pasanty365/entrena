@@ -4,7 +4,9 @@
 import { importarImagenes, importarSesiones } from '../almacen.js';
 import { CONFIG } from '../config.js';
 import { h, pantalla, poner } from '../dom.js';
-import { diagnosticoDeVoces, etiquetaDeVoz, idDeVoz } from '../voz.js';
+import { crearGrabadora } from '../microfono.js';
+import { crearPruebaDeSonido } from '../prueba-de-sonido.js';
+import { diagnosticoDeVoces, etiquetaDeVoz, idDeVoz, sinVocesRepetidas } from '../voz.js';
 
 export async function ajustes(app) {
   const mensaje = h('p', { class: 'aviso', role: 'status', hidden: true });
@@ -34,8 +36,8 @@ export async function ajustes(app) {
 
   const probar = () => {
     app.voz.desbloquear();
+    // `desbloquear` ya hace sonar un pitido dentro del toque.
     app.sonido.desbloquear();
-    app.sonido.pitido();
     const haDicho = app.voz.decir('Así suena la voz de Entrena.');
     if (!app.voz.disponible) decir('Este navegador no tiene voz.', true);
     else if (!haDicho && !app.sonido.estaActivo()) decir('La voz y el sonido están apagados.');
@@ -58,8 +60,9 @@ export async function ajustes(app) {
   }
 
   function pintarVoces() {
-    const voces = app.voz.voces();
     const elegida = app.voz.vozElegida();
+    // El iPhone da la misma voz en dos calidades con el mismo nombre: se enseña una sola.
+    const voces = sinVocesRepetidas(app.voz.voces(), elegida);
     const fila = (id, etiqueta, marcada) =>
       h(
         'div',
@@ -79,7 +82,9 @@ export async function ajustes(app) {
     const sigueDisponible = voces.some((voz) => idDeVoz(voz) === elegida);
     poner(
       listaDeVoces,
-      fila(null, 'Automática (español de España)', !sigueDisponible),
+      // «Automática» no impone ninguna voz: habla la que el dispositivo tenga puesta para español
+      // (en el iPhone, Ajustes → Accesibilidad → Contenido leído → Voces), de la primera frase a la última.
+      fila(null, 'Automática: la voz que tengas puesta en el iPhone', !sigueDisponible),
       voces.map((voz) => fila(idDeVoz(voz), etiquetaDeVoz(voz), idDeVoz(voz) === elegida)),
     );
   }
@@ -247,6 +252,28 @@ export async function ajustes(app) {
     }
   });
 
+  // ---- Prueba de sonido con retraso: ¿suena un pitido lanzado por un temporizador? ----
+  const probarSonidoConRetraso = crearPruebaDeSonido({
+    sonido: app.sonido,
+    voz: app.voz,
+    crearGrabadora: () => crearGrabadora({ maximoSegundos: 5 }),
+    config: CONFIG,
+  });
+  function hacerPruebaDeSonido() {
+    cajaDeDiagnostico.hidden = false;
+    botonCopiar.hidden = false;
+    cajaDeDiagnostico.value = 'Escucha: un pitido ahora, otro a los 5 segundos, otro a los 8 y al final la voz. Entre el primero y el segundo se graba 2 segundos con el micrófono (puede pedir permiso). No toques nada durante 10 segundos…';
+    probarSonidoConRetraso((lineas) => {
+      cajaDeDiagnostico.value = [
+        ...lineas,
+        `Versión de la app: ${app.version ?? 'desconocida'}`,
+        `App instalada: ${lineasDeEstado[0]}`,
+        `Interruptor de pitidos: ${app.sonido.estaActivo() ? 'encendido' : 'apagado'}`,
+        `Navegador: ${navigator.userAgent}`,
+      ].join('\n');
+    });
+  }
+
   // Un botón que abre el selector de archivos del sistema.
   const botonDeArchivo = (texto, opciones, alElegir) =>
     h('label', { class: 'boton' }, texto, h('input', { class: 'oculto', type: 'file', onchange: alElegir, ...opciones }));
@@ -311,6 +338,8 @@ export async function ajustes(app) {
         h('button', { class: 'boton', onclick: () => app.ir('microfono') }, 'Prueba del micrófono'),
         h('p', { class: 'suave pequeno' }, 'Provisional: graba y reproduce, sin enviar nada. Sirve para saber si se podrá hablar con el entrenador.'),
         lineasDeEstado.map((linea) => h('p', { class: 'suave pequeno' }, linea)),
+        h('button', { class: 'boton', onclick: hacerPruebaDeSonido }, 'Prueba de sonido con retraso'),
+        h('p', { class: 'suave pequeno' }, 'Tienen que oírse tres pitidos (al pulsar, a los 5 segundos y a los 8) y al final la voz. Entre el primero y el segundo graba 2 segundos con el micrófono: lo grabado no se guarda ni se envía. Sirve para saber si los pitidos suenan cuando los lanza el temporizador, y si todo sigue sonando después de grabar.'),
         h('button', { class: 'boton', onclick: hacerDiagnostico }, 'Diagnóstico de voces'),
         h('p', { class: 'suave pequeno' }, 'Dice una frase y enseña todas las voces que da el dispositivo y cuál usa la app. Es un texto para copiar y pegar.'),
         cajaDeDiagnostico,

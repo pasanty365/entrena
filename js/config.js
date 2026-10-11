@@ -22,8 +22,12 @@ export const CONFIG = Object.freeze({
 
   // Cómo suena cada pitido: tono en hercios, duración en milisegundos y volumen de 0 a 1.
   pitidoHz: 880,
-  pitidoMs: 120,
-  pitidoVolumen: 0.15,
+  pitidoMs: 220,
+  pitidoVolumen: 0.35,
+
+  // Si en Ajustes hay elegida una voz concreta y el dispositivo aún no ha entregado su lista de
+  // voces, la app espera como mucho esto antes de decir la primera frase (milisegundos).
+  esperaMaximaDeVocesMs: 1500,
 
   // En los descansos, la voz avisa cuando quedan estos segundos («Quedan 10 segundos»)…
   avisoQuedanSegundos: 10,

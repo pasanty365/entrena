@@ -50,9 +50,23 @@ export function crearGrabadora({
   let tope = null;
   let resolverFin = null;
 
+  // El iPhone tiene un «modo de sonido» por app. Para que la voz y los pitidos suenen con el
+  // interruptor en silencio, la app pone el modo «playback» (solo reproducir); pero en ese modo
+  // el iPhone no deja grabar. Por eso, antes de pedir el micrófono se pasa a «play-and-record»
+  // (reproducir y grabar) y, al soltarlo, se vuelve a «playback».
+  function ponerModoDeSonido(tipo) {
+    try {
+      if (navegador?.audioSession) navegador.audioSession.type = tipo;
+    } catch {
+      // Si el navegador no deja cambiarlo, se sigue sin ello.
+    }
+  }
+
   function soltarMicrofono() {
+    const habia = Boolean(flujo);
     flujo?.getTracks().forEach((pista) => pista.stop());
     flujo = null;
+    if (habia) ponerModoDeSonido('playback');
   }
 
   async function empezar() {
@@ -60,15 +74,18 @@ export function crearGrabadora({
     pulsado = true;
     trozos = [];
     let nuevo;
+    ponerModoDeSonido('play-and-record');
     try {
       nuevo = await navegador.mediaDevices.getUserMedia({ audio: true });
     } catch (error) {
       pulsado = false;
+      ponerModoDeSonido('playback');
       throw error;
     }
     if (!pulsado) {
       // Se soltó el botón mientras el iPhone preguntaba por el permiso.
       nuevo.getTracks().forEach((pista) => pista.stop());
+      ponerModoDeSonido('playback');
       return false;
     }
     flujo = nuevo;

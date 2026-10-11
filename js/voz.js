@@ -91,8 +91,19 @@ const idiomaNormal = (lang) => String(lang ?? '').replace('_', '-').toLowerCase(
 // Lo que identifica a una voz para poder guardarla en Ajustes.
 export const idDeVoz = (voz) => voz.voiceURI || voz.name;
 
+// La voz que se pone en una frase (decisión del 11/10/2026):
+//   - «Automática» (sin voz elegida): NINGUNA. La frase lleva solo el idioma y habla la voz que
+//     el dispositivo tenga puesta para español. En el iPhone es la de Ajustes → Accesibilidad →
+//     Contenido leído, que puede ser una voz descargada (mejorada o premium) que el iPhone no
+//     ofrece en su lista a las apps web.
+//   - Con una voz elegida en Ajustes: esa, si el dispositivo la sigue teniendo; si no, ninguna.
+export function vozParaLaFrase(voces, preferida = null) {
+  if (!preferida) return null;
+  return voces.find((voz) => idDeVoz(voz) === preferida) ?? null;
+}
+
 // De las voces del dispositivo, la del idioma pedido; si no hay, otra en español.
-// Si en Ajustes se eligió una (`preferida`) y el dispositivo la sigue teniendo, manda esa.
+// Ya no se usa para hablar (ver `vozParaLaFrase`); queda para ordenar y describir la lista.
 export function elegirVoz(voces, idioma = CONFIG.idiomaDeVoz, preferida = null) {
   if (preferida) {
     const elegida = voces.find((voz) => idDeVoz(voz) === preferida);
@@ -112,6 +123,33 @@ export function vocesEnEspanol(voces, idioma = CONFIG.idiomaDeVoz) {
   return voces
     .filter((voz) => idiomaNormal(voz.lang).startsWith('es'))
     .sort((a, b) => deLaApp(a) - deLaApp(b) || a.name.localeCompare(b.name, 'es'));
+}
+
+// Calidad de una voz según el identificador que da iOS, de peor a mejor.
+function calidadDeVoz(voz) {
+  const id = String(voz.voiceURI ?? '').toLowerCase();
+  if (id.includes('premium')) return 3;
+  if (id.includes('enhanced')) return 2;
+  if (id.includes('super-compact')) return 0;
+  return 1;
+}
+
+// El iPhone da algunas voces dos veces (la misma voz en dos calidades, con el mismo nombre).
+// En el selector se deja una sola por nombre e idioma: la de mejor calidad. Si la que estaba
+// elegida en Ajustes es la otra, se deja esa, para que no desaparezca la elección.
+export function sinVocesRepetidas(voces, elegida = null) {
+  const porNombre = new Map();
+  for (const voz of voces) {
+    const clave = `${voz.name}|${idiomaNormal(voz.lang)}`;
+    const actual = porNombre.get(clave);
+    const gana =
+      !actual ||
+      idDeVoz(voz) === elegida ||
+      (idDeVoz(actual) !== elegida && calidadDeVoz(voz) > calidadDeVoz(actual));
+    if (gana) porNombre.set(clave, voz);
+  }
+  const quedan = new Set(porNombre.values());
+  return voces.filter((voz) => quedan.has(voz));
 }
 
 const PAISES = {
@@ -153,8 +191,8 @@ export function diagnosticoDeVoces({ voces = [], elegida = null, enUso = null, u
   for (const [clave, valor] of Object.entries(entorno)) lineas.push(`${clave}: ${valor}`);
   lineas.push(
     `Voces que da el dispositivo: ${voces.length} (en español: ${espanol.length})`,
-    `Voz elegida en Ajustes: ${elegida ?? 'automática'}`,
-    `Voz que la app pone en la frase: ${enUso ? `${enUso.name} | ${enUso.lang} | ${idDeVoz(enUso)}` : 'ninguna (decide el dispositivo)'}`,
+    `Voz elegida en Ajustes: ${elegida ?? 'automática (la voz del dispositivo)'}`,
+    `Voz que la app pone en la frase: ${enUso ? `${enUso.name} | ${enUso.lang} | ${idDeVoz(enUso)}` : 'ninguna (habla la voz del dispositivo)'}`,
     `¿La elegida sigue en la lista?: ${elegida ? siNo(voces.some((voz) => idDeVoz(voz) === elegida)) : 'no aplica'}`,
   );
   if (ultima) {
@@ -176,18 +214,59 @@ export function crearVoz({
   CrearFrase = globalThis.SpeechSynthesisUtterance ?? null,
   navegador = globalThis.navigator ?? null,
   config = CONFIG,
+  programar = (accion, ms) => setTimeout(accion, ms),
+  cancelarTemporizador = (id) => clearTimeout(id),
 } = {}) {
   const disponible = Boolean(sintetizador && CrearFrase);
   let activa = true;
   let preferida = null; // la voz elegida en Ajustes, o null para la automática
   let ultima = null; // lo que pasó con la última frase, para el diagnóstico
+  let enEspera = []; // frases que esperan a que el dispositivo entregue su lista de voces
+  let finDeLaEspera = null;
+
+  // El iPhone no entrega la lista de voces hasta un rato después de pedírsela por primera vez.
+  // Se le pide ya, al arrancar, para que esté cuando haga falta.
+  const listaDeVoces = () => (disponible ? Array.from(sintetizador.getVoices()) : []);
+  listaDeVoces();
+  if (disponible && sintetizador.addEventListener) sintetizador.addEventListener('voiceschanged', soltarLasQueEsperan);
+
+  function soltarLasQueEsperan() {
+    if (enEspera.length === 0) return;
+    cancelarTemporizador(finDeLaEspera);
+    finDeLaEspera = null;
+    const pendientes = enEspera;
+    enEspera = [];
+    for (const { texto, opciones } of pendientes) hablar(texto, opciones);
+  }
 
   // `con` fuerza una voz concreta para esa frase: lo usa el botón «Oír» de Ajustes.
   function decir(texto, { interrumpir = false, con = undefined, aunqueEsteApagada = false } = {}) {
     if (!disponible || !texto || (!activa && !aunqueEsteApagada)) return false;
-    if (interrumpir) sintetizador.cancel();
+    const pedida = con === undefined ? preferida : con;
+    // Con una voz concreta y la lista aún vacía, se espera a tenerla (como mucho un momento):
+    // así la app no empieza con una voz y cambia a otra a mitad de sesión.
+    if (pedida && listaDeVoces().length === 0) {
+      if (interrumpir) {
+        sintetizador.cancel();
+        enEspera = [];
+      }
+      enEspera.push({ texto, opciones: { con, aunqueEsteApagada } });
+      finDeLaEspera ??= programar(soltarLasQueEsperan, config.esperaMaximaDeVocesMs);
+      return true;
+    }
+    if (interrumpir) {
+      sintetizador.cancel();
+      enEspera = [];
+    }
+    // Si la lista acaba de llegar y aún hay frases esperando, salen antes: se respeta el orden.
+    soltarLasQueEsperan();
+    return hablar(texto, { con, aunqueEsteApagada });
+  }
+
+  function hablar(texto, { con = undefined, aunqueEsteApagada = false } = {}) {
+    if (!activa && !aunqueEsteApagada) return false;
     const frase = new CrearFrase(texto);
-    const voz = elegirVoz(sintetizador.getVoices(), config.idiomaDeVoz, con === undefined ? preferida : con);
+    const voz = vozParaLaFrase(listaDeVoces(), con === undefined ? preferida : con);
     // Con una voz elegida de otro país, la frase lleva el idioma de esa voz.
     frase.lang = voz?.lang ? String(voz.lang).replace('_', '-') : config.idiomaDeVoz;
     if (voz) frase.voice = voz;
@@ -222,6 +301,7 @@ export function crearVoz({
       sintetizador.resume?.();
     },
     callar() {
+      enEspera = [];
       if (disponible) sintetizador.cancel();
     },
     activar(valor) {
@@ -240,7 +320,8 @@ export function crearVoz({
     // Las voces en español que ofrece ahora mismo el dispositivo.
     voces: () => (disponible ? vocesEnEspanol(sintetizador.getVoices(), config.idiomaDeVoz) : []),
     // La que se usará de verdad (por si la elegida ya no está en el dispositivo).
-    vozEnUso: () => (disponible ? elegirVoz(sintetizador.getVoices(), config.idiomaDeVoz, preferida) : null),
+    // Null significa «ninguna: habla la voz del dispositivo».
+    vozEnUso: () => (disponible ? vozParaLaFrase(listaDeVoces(), preferida) : null),
     // El iPhone entrega la lista de voces con retraso: avisa cuando cambia. Devuelve cómo dejar de escuchar.
     alCambiarVoces(aviso) {
       if (!disponible || !sintetizador.addEventListener) return () => {};

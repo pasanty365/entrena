@@ -4,7 +4,7 @@ import { abrirAlmacen } from './almacen.js';
 import { cargarCatalogo } from './catalogo.js';
 import { h, pantalla, poner } from './dom.js';
 import { pantallas } from './pantallas/indice.js';
-import { crearSonido } from './sonido.js';
+import { crearSonido, palabraDeCuenta } from './sonido.js';
 import { crearVoz } from './voz.js';
 
 const raiz = document.getElementById('app');
@@ -73,7 +73,10 @@ const app = {
   ajustes: null,
   ejemplo: null,
   voz: crearVoz(),
-  sonido: crearSonido(),
+  // Si un pitido no puede sonar cuando lo lanza el temporizador, la cuenta la dice la voz.
+  sonido: crearSonido({
+    alFallar: (quedan) => app.voz.decir(palabraDeCuenta(quedan), { aunqueEsteApagada: true }),
+  }),
   async urlDeImagen(id) {
     if (!direcciones.has(id)) {
       const imagen = await app.almacen.imagen(id);
